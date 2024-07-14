@@ -20,6 +20,7 @@ setup('authenticate', async ({ page }) => {
   await page.locator('#AccountFrm_confirm').fill(user.passwordConfirm);
   await page.locator('#AccountFrm_newsletter0').click();
   await page.locator('#AccountFrm_agree').click();
+  await page.waitForTimeout(1000);
   await page.getByTitle('Continue').click();
 
   

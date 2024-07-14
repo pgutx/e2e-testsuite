@@ -10,7 +10,6 @@ export const test = base.extend<pageFixture>({
       const homepage = new HomePage(page);
       await homepage.page.goto('/');
       await use(homepage);
-      await homepage.page.close();
     }
 });
 
