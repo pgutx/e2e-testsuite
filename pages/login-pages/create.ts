@@ -1,9 +1,10 @@
 import { type Locator, type Page } from '@playwright/test';
 import { user } from '../../utils/variables/user';
+import { randomInt } from 'crypto';
 
 export const newUser = {
-    emailAddress: 'accountcreation@test.com',
-    loginName: 'accountcreationlogin1'
+    emailAddress: 'accountcreation' + randomInt(1, 200) + '@test.com',
+    loginName: 'accountcreationlogin'  + randomInt(1, 200),
 }
 
 export class CreatePage {
