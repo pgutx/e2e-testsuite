@@ -1,18 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { user } from '../utils/variables/user';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
-
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+test('Test', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('link', { name: '  Account' }).click();
+  await expect(await page.locator('.subtext')).toHaveText(user.firstName);
 });
