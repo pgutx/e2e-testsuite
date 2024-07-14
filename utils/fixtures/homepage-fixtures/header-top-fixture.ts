@@ -1,4 +1,4 @@
-import { test as base, expect } from '../homepageFixture';
+import { test as base } from './homepage-fixture';
 
 import { HomePageHeaderTop } from '../../../pages/homepage-pages/header-top';
 
@@ -13,5 +13,4 @@ export const test = base.extend<pageFixture>({
     }
 });
 
-export { expect } from '@playwright/test';
 

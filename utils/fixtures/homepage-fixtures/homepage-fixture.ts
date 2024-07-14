@@ -1,5 +1,5 @@
 import { test as base } from '@playwright/test';
-import { HomePage } from '../../pages/homepage';
+import { HomePage } from '../../../pages/homepage';
 
 type pageFixture = {
   homepage: HomePage;
@@ -12,5 +12,3 @@ export const test = base.extend<pageFixture>({
       await use(homepage);
     }
 });
-
-export { expect } from '@playwright/test';
