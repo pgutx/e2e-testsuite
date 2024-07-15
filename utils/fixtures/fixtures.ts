@@ -5,10 +5,12 @@ import { test as headerTopTest } from '../fixtures/homepage-fixtures/header-top-
 import { test as headerBotTest } from '../fixtures/homepage-fixtures/header-bot-fixture';
 import { test as loginPageTest } from '../fixtures/login-fixtures/login-fixture';
 import { test as createPageTest } from '../fixtures/login-fixtures/create-fixture';
+import { test as featuredTest } from '../fixtures/homepage-fixtures/homepage-featured';
 
 export const test = mergeTests(homepageTest, 
                                headerTopTest,
-                               headerBotTest, 
+                               headerBotTest,
+                               featuredTest, 
                                loginPageTest,
                                createPageTest);
 

@@ -145,6 +145,10 @@ export class HomePageHeaderTop {
       await this.cartPopup.hover();
     }
 
+    async clickCartPopup(){
+      await this.cartPopup.click();
+    }
+
     async clickViewCart(){
       await this.viewCart.click();
     }

@@ -1,5 +1,6 @@
 import { test as base } from '@playwright/test';
-import { HomePage } from '../../../pages/homepage';
+
+import { HomePage } from '../../../pages/homepage-pages/homepage';
 
 type pageFixture = {
   homepage: HomePage;

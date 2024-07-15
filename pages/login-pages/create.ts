@@ -87,11 +87,11 @@ export class CreatePage {
     }
 
     async clickNoSubscribeRadio(){
-      await this.subscribeNo.click();
+      await this.subscribeNo.check();
     }
 
     async clickAcceptPolicy(){
-      await this.privacyPolicy.click();
+      await this.privacyPolicy.check();
     }
 
     async clickContinueButton(){
