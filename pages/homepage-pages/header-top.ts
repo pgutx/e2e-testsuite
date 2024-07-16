@@ -53,7 +53,7 @@ export class HomePageHeaderTop {
       this.euro = page.getByRole('link', { name: '€ Euro' });
       this.sterling = page.getByRole('link', { name: '£ Pound Sterling' });
       this.dollar = page.getByRole('link', { name: '$ US Dollar' });
-      this.cartPopup = page.getByRole('link', { name: '    0 Items - $' });
+      this.cartPopup = page.locator('.topcart').getByRole('listitem').filter({has: page.getByRole('link')});
       this.viewCart = page.getByTitle('View Cart');
       this.viewCheckout = page.getByTitle('Checkout');
       this.facebook = page.getByTitle('Facebook');

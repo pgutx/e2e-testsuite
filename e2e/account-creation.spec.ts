@@ -5,14 +5,14 @@ import { newUser } from '../pages/login-pages/create';
 
 test.use({ storageState: { cookies: [], origins: [] } });
 
-test('Scenario: Clicking Login or register button whilst on the homepage', async ({ headerTop }) => {
+test('Scenario: Clicking Login or register button whilst on the homepage', async ({ headerTop, request }) => {
 
   await test.step('AC: The button can be clicked', async() => {
     await headerTop.clickLoginButton();
   });
 
   await test.step('AC: The button should lead to correct page', async() => {
-    await expect(headerTop.page).toHaveURL(`${urls.loginPage}`);
+    await expect(headerTop.page).toHaveURL(urls.loginPage);
   });
 
 });
@@ -26,7 +26,7 @@ test('Scenario: Proceeding with the registration on the login page', async ({ he
   });
 
   await test.step('AC: The button should lead to correct page', async() => {
-    await expect(loginPage.page).toHaveURL(`${urls.createNewAccount}`);
+    await expect(loginPage.page).toHaveURL(urls.createNewAccount);
   });
 
 });
@@ -268,7 +268,7 @@ test('Scenario: Registering an account', async ({ headerTop, loginPage, createPa
   });
 
   await test.step('AC: Clicking the button registers the user', async() => {
-    await expect(createPage.page).toHaveURL(`${urls.registerSuccess}`);
+    await expect(createPage.page).toHaveURL(urls.registerSuccess);
   });
 
 });

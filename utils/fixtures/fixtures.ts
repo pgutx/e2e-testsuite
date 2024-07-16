@@ -9,6 +9,13 @@ import { test as featuredTest } from '../fixtures/homepage-fixtures/homepage-fea
 import { test as latestTest } from '../fixtures/homepage-fixtures/homepage-latest';
 import { test as bestsellersTest } from '../fixtures/homepage-fixtures/homepage-bestsellers';
 import { test as specialsTest } from '../fixtures/homepage-fixtures/homepage-specials';
+import { test as brandsTest } from '../fixtures/homepage-fixtures/homepage-brands';
+import { test as footerTest } from '../fixtures/homepage-fixtures/footer-fixture';
+import { test as basketTest } from '../fixtures/purchase-flow-fixtures/basket-fixture';
+import { test as checkoutTest } from '../fixtures/purchase-flow-fixtures/checkout-fixture';
+import { test as paymentTest } from '../fixtures/purchase-flow-fixtures/payment-fixture';
+import { test as shippingTest } from '../fixtures/purchase-flow-fixtures/shipping-fixture';
+
 
 export const test = mergeTests(homepageTest, 
                                headerTopTest,
@@ -16,8 +23,14 @@ export const test = mergeTests(homepageTest,
                                featuredTest,
                                latestTest,
                                bestsellersTest,
-                               specialsTest, 
+                               specialsTest,
+                               brandsTest,
+                               footerTest, 
                                loginPageTest,
-                               createPageTest);
+                               createPageTest,
+                               basketTest,
+                               paymentTest,
+                               shippingTest,
+                               checkoutTest);
 
 export { expect } from '@playwright/test';
