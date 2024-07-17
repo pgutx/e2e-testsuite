@@ -24,6 +24,7 @@ export class HomePageHeaderTop {
     readonly sterling: Locator;
     readonly dollar: Locator;
     readonly cartPopup: Locator;
+    readonly emptyCartPopup: Locator;
     readonly viewCart: Locator;
     readonly viewCheckout: Locator;
     readonly facebook: Locator;
@@ -54,6 +55,7 @@ export class HomePageHeaderTop {
       this.sterling = page.getByRole('link', { name: '£ Pound Sterling' });
       this.dollar = page.getByRole('link', { name: '$ US Dollar' });
       this.cartPopup = page.locator('.topcart').getByRole('listitem').filter({has: page.getByRole('link')});
+      this.emptyCartPopup = page.locator('.empty_cart');
       this.viewCart = page.getByTitle('View Cart');
       this.viewCheckout = page.getByTitle('Checkout');
       this.facebook = page.getByTitle('Facebook');

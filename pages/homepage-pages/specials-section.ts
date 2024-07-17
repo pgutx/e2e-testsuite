@@ -12,6 +12,7 @@ export class HomePageSpecials {
     readonly firstItemOldPrice: Locator;
     readonly firstItemSaleTag: Locator;
     readonly firstItemCartButton: Locator;
+    readonly itemAddedToCart: Locator;
     readonly lastItem: Locator;
     readonly lastItemName: Locator;
     readonly lastItemImg: Locator;
@@ -34,6 +35,7 @@ export class HomePageSpecials {
       this.firstItemOldPrice = page.locator('#block_frame_special_1772').getByText('$105.00');
       this.firstItemSaleTag = page.locator('#block_frame_special_1772 > .thumbnails > div > .thumbnail > .sale').first();
       this.firstItemCartButton = page.locator('#block_frame_special_1772').getByRole('link', { name: '' });
+      this.itemAddedToCart = page.locator('.added_to_cart');
       this.lastItem = page.getByText('Brunette expressions Conditioner View Write Review Out of Stock $24.00 $');
       this.lastItemName = page.getByRole('link', { name: 'Brunette expressions' });
       this.lastItemImg = page.locator('.thumbnail > a').nth(15).locator('img');

@@ -19,8 +19,10 @@ test('Scenario: Clicking Login or register button whilst on the homepage', async
 
 test('Scenario: Proceeding with the registration on the login page', async ({ headerTop, loginPage }) => {
 
-  await headerTop.clickLoginButton();
-
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
+  
   await test.step('AC: The button can be clicked', async() => {
     await loginPage.clickContinueRegistrationButton();
   });
@@ -33,9 +35,13 @@ test('Scenario: Proceeding with the registration on the login page', async ({ he
 
 test('Scenario: Filling out First Name field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillFirstNameField();
@@ -49,9 +55,13 @@ test('Scenario: Filling out First Name field during registration', async ({ head
 
 test('Scenario: Filling out Last Name field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillLastNameField();
@@ -65,9 +75,13 @@ test('Scenario: Filling out Last Name field during registration', async ({ heade
 
 test('Scenario: Filling out Email field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillEmailField();
@@ -81,9 +95,13 @@ test('Scenario: Filling out Email field during registration', async ({ headerTop
 
 test('Scenario: Filling out Address 1 field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillAddressField();
@@ -97,9 +115,13 @@ test('Scenario: Filling out Address 1 field during registration', async ({ heade
 
 test('Scenario: Filling out City field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillCityField();
@@ -113,9 +135,13 @@ test('Scenario: Filling out City field during registration', async ({ headerTop,
 
 test('Scenario: Choosing country option during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The option field is clickable', async() => {
     await createPage.selectCountryOption();
@@ -129,11 +155,17 @@ test('Scenario: Choosing country option during registration', async ({ headerTop
 
 test('Scenario: Choosing region option during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
-  await createPage.selectCountryOption();
+  await test.step('Select country option', async() => {
+    await createPage.selectCountryOption();
+  });
 
   await test.step('AC: The option field is clickable', async() => {
     await createPage.selectStateOption();
@@ -147,9 +179,13 @@ test('Scenario: Choosing region option during registration', async ({ headerTop,
 
 test('Scenario: Filling out ZIP code field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillZipField();
@@ -163,9 +199,13 @@ test('Scenario: Filling out ZIP code field during registration', async ({ header
 
 test('Scenario: Filling out Login field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillLoginField();
@@ -179,9 +219,13 @@ test('Scenario: Filling out Login field during registration', async ({ headerTop
 
 test('Scenario: Filling out Password field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillPasswordField();
@@ -195,9 +239,13 @@ test('Scenario: Filling out Password field during registration', async ({ header
 
 test('Scenario: Filling out Confirm password field during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The field can be filled out', async() => {
     await createPage.fillPasswordConfirmField();
@@ -211,9 +259,13 @@ test('Scenario: Filling out Confirm password field during registration', async (
 
 test('Scenario: Clicking Subscribe to Newsletter button during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The radio button can be clicked', async() => {
     await createPage.clickNoSubscribeRadio();
@@ -227,9 +279,13 @@ test('Scenario: Clicking Subscribe to Newsletter button during registration', as
 
 test('Scenario: Accepting Privacy Policy during registration', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
   await test.step('AC: The checkbox can be clicked', async() => {
     await createPage.clickAcceptPolicy();
@@ -243,11 +299,15 @@ test('Scenario: Accepting Privacy Policy during registration', async ({ headerTo
 
 test('Scenario: Registering an account', async ({ headerTop, loginPage, createPage }) => {
 
-  await headerTop.clickLoginButton();
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
 
-  await loginPage.clickContinueRegistrationButton();
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
 
-  await test.step('AC: All the fields should be interactable', async() => {
+  await test.step('AC: Each form field can be filled/interacted with', async() => {
     await createPage.fillFirstNameField();
     await createPage.fillLastNameField();
     await createPage.fillEmailField();

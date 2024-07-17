@@ -10,6 +10,7 @@ export class HomePageBestsellers {
     readonly firstItemReviewButton: Locator;
     readonly firstItemPrice: Locator;
     readonly firstItemCartButton: Locator;
+    readonly itemAddedToCart: Locator;
     readonly lastItem: Locator;
     readonly lastItemName: Locator;
     readonly lastItemImg: Locator;
@@ -28,6 +29,7 @@ export class HomePageBestsellers {
       this.firstItemReviewButton = page.getByRole('link', { name: 'Write Review' });
       this.firstItemPrice = page.getByText('$14.00');
       this.firstItemCartButton = page.locator('#block_frame_bestsellers_1771').getByRole('link', { name: '' }).first();
+      this.itemAddedToCart = page.locator('.added_to_cart');
       this.lastItem = page.locator('#block_frame_bestsellers_1771').getByText('Absolue Eye Precious Cells View Write Review $89.00 $');
       this.lastItemName = page.locator('#block_frame_bestsellers_1771').getByRole('link', { name: 'Absolue Eye Precious Cells' });
       this.lastItemImg = page.locator('.thumbnail > a').nth(11).locator('img');

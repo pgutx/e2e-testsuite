@@ -10,6 +10,7 @@ export class HomePageFeatured {
     readonly firstItemReviewButton: Locator;
     readonly firstItemPrice: Locator;
     readonly firstItemCartButton: Locator;
+    readonly itemAddedToCart: Locator;
     readonly lastItem: Locator;
     readonly lastItemName: Locator;
     readonly lastItemImg: Locator;
@@ -28,6 +29,7 @@ export class HomePageFeatured {
       this.firstItemReviewButton = page.getByRole('link', { name: 'Write Review' });
       this.firstItemPrice = page.locator('#block_frame_featured_1769').getByText('$29.50');
       this.firstItemCartButton = page.locator('#block_frame_featured_1769').getByRole('link', { name: '' }).first();
+      this.itemAddedToCart = page.locator('.added_to_cart');
       this.lastItem = page.getByText('Tropiques Minerale Loose Bronzer View Write Review $');
       this.lastItemName = page.locator('#block_frame_featured_1769').getByRole('link', { name: 'Tropiques Minerale Loose Bronzer' });
       this.lastItemImg = page.locator('.thumbnail > a').nth(3).locator('img');
