@@ -15,6 +15,7 @@ import { test as basketTest } from '../fixtures/purchase-flow-fixtures/basket-fi
 import { test as checkoutTest } from '../fixtures/purchase-flow-fixtures/checkout-fixture';
 import { test as paymentTest } from '../fixtures/purchase-flow-fixtures/payment-fixture';
 import { test as shippingTest } from '../fixtures/purchase-flow-fixtures/shipping-fixture';
+import { test as newAddressTest } from '../fixtures/purchase-flow-fixtures/new-address-fixture';
 
 
 export const test = mergeTests(homepageTest, 
@@ -31,6 +32,7 @@ export const test = mergeTests(homepageTest,
                                basketTest,
                                paymentTest,
                                shippingTest,
+                               newAddressTest,
                                checkoutTest);
 
 export { expect } from '@playwright/test';

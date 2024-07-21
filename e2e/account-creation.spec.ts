@@ -5,7 +5,7 @@ import { newUser } from '../pages/login-pages/create';
 
 test.use({ storageState: { cookies: [], origins: [] } });
 
-test('Scenario: Clicking Login or register button whilst on the homepage', async ({ headerTop, request }) => {
+test('Scenario: Clicking Login or register button whilst on the homepage', async ({ headerTop }) => {
 
   await test.step('AC: The button can be clicked', async() => {
     await headerTop.clickLoginButton();
@@ -332,4 +332,3 @@ test('Scenario: Registering an account', async ({ headerTop, loginPage, createPa
   });
 
 });
-

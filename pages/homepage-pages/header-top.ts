@@ -25,6 +25,8 @@ export class HomePageHeaderTop {
     readonly dollar: Locator;
     readonly cartPopup: Locator;
     readonly emptyCartPopup: Locator;
+    readonly itemNameLink: Locator;
+    readonly itemTotalPrice: Locator;
     readonly viewCart: Locator;
     readonly viewCheckout: Locator;
     readonly facebook: Locator;
@@ -37,8 +39,8 @@ export class HomePageHeaderTop {
       this.login = page.getByRole('link', { name: 'Login or register' });
       this.specials = page.getByRole('link', { name: '  Specials' });
       this.account = page.getByRole('link', { name: '  Account' });
-      this.cart = page.getByRole('link', { name: '  Cart' });
-      this.checkout = page.getByRole('link', { name: '  Checkout' });
+      this.cart = page.getByRole('link', { name: '  Cart' });
+      this.checkout = page.getByRole('link', { name: '  Checkout' });
       this.searchField = page.getByPlaceholder('Search Keywords');
       this.categorySelected = page.locator('#category_selected');
       this.categoryAll = page.locator('#category_0');
@@ -56,6 +58,8 @@ export class HomePageHeaderTop {
       this.dollar = page.getByRole('link', { name: '$ US Dollar' });
       this.cartPopup = page.locator('.topcart').getByRole('listitem').filter({has: page.getByRole('link')});
       this.emptyCartPopup = page.locator('.empty_cart');
+      this.itemNameLink = page.locator('.name').getByRole('link');
+      this.itemTotalPrice = page.locator('.total');
       this.viewCart = page.getByTitle('View Cart');
       this.viewCheckout = page.getByTitle('Checkout');
       this.facebook = page.getByTitle('Facebook');
@@ -149,6 +153,10 @@ export class HomePageHeaderTop {
 
     async clickCartPopup(){
       await this.cartPopup.click();
+    }
+
+    async clickItemName(){
+      await this.itemNameLink.click();
     }
 
     async clickViewCart(){

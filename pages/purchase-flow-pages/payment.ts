@@ -9,6 +9,7 @@ export class PurchasePayment{
     readonly couponButton: Locator;
     readonly invalidCouponAlert: Locator;
     readonly removeCouponButton: Locator;
+    readonly successCouponAlert: Locator;
     readonly commentField: Locator;
     readonly returnPolicyCheckbox: Locator;
     readonly backButton: Locator;
@@ -23,6 +24,7 @@ export class PurchasePayment{
       this.couponButton = page.getByTitle('Apply Coupon');
       this.invalidCouponAlert = page.getByText('Error: Coupon is either invalid');
       this.removeCouponButton = page.locator('#remove_coupon_btn');
+      this.successCouponAlert = page.getByText('Success: Coupon has been removed!');
       this.commentField = page.locator('#payment_comment');
       this.returnPolicyCheckbox = page.locator('#payment_agree');
       this.backButton = page.getByTitle('Back');
