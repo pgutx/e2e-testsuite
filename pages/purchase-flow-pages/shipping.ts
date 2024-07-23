@@ -17,8 +17,8 @@ export class PurchaseShipping{
       this.changeAddressButton = page.getByTitle('Change Address');
       this.shippingMethodField = page.getByRole('table').locator('tr').nth(1).locator('td').nth(1).locator('label');
       this.commentField = page.locator('#shipping_comment');
-      this.backButton = page.getByTitle('Back');
-      this.continueButton = page.getByTitle('Continue');
+      this.backButton = page.getByRole('link', { name: ' Back' });
+      this.continueButton = page.getByRole('button', { name: ' Continue' });
     }
 
     async clickChangeAddressButton(){

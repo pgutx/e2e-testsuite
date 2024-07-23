@@ -27,8 +27,8 @@ export class PurchasePayment{
       this.successCouponAlert = page.getByText('Success: Coupon has been removed!');
       this.commentField = page.locator('#payment_comment');
       this.returnPolicyCheckbox = page.locator('#payment_agree');
-      this.backButton = page.getByTitle('Back');
-      this.continueButton = page.getByTitle('Continue');
+      this.backButton = page.getByRole('link', { name: ' Back' });
+      this.continueButton = page.getByRole('button', { name: ' Continue' });
     }
 
     async clickChangeAddressButton(){

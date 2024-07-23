@@ -13,5 +13,6 @@ export const urls = {
     newShippingAddress: 'index.php?rt=checkout/address/shipping',
     editPaymentPage: '/index.php?rt=checkout/payment&mode=edit',
     newPaymentAddress: '/index.php?rt=checkout/address/payment',
+    returnPolicyPage: '/index.php?rt=content/content&content_id=3',
     placeOrderSuccess: '/index.php?rt=checkout/success',
 };

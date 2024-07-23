@@ -1,6 +1,6 @@
 import { type Locator, type Page } from '@playwright/test';
 
-export const newAddress = {
+export const newAddressVariables = {
     newFirstName: 'newAddressFirstName',
     newLastName: 'newAddressLastName',
     newAddress: 'newAddress',
@@ -27,16 +27,16 @@ export class PurchaseNewAddress{
     constructor(page: Page){
       this.page = page;
       this.actualAddressForm = page.locator('#address_1');
-      this.actualAddressFormContinueButton = page.locator('#address_1').filter({ has: page.getByTitle('Continue') });
-      this.newAddressForm = page.locator('Address2Frm');
-      this.newAddressFirstNameField = page.locator('Address2Frm_firstname');
-      this.newAddressLastNameField = page.locator('Address2Frm_lastname');
-      this.newAddressAddressField = page.locator('Address2Frm_address_1');
-      this.newAddressCityField = page.locator('Address2Frm_city');
-      this.newAddressStateOption = page.locator('Address2Frm_zone_id');
-      this.newAddressZipField = page.locator('Address2Frm_postcode');
-      this.newAddressCountryOption = page.locator('Address2Frm_country_id');
-      this.newAddressContinueButton = page.locator('Address2Frm').filter({ has: page.getByTitle('Continue') });
+      this.actualAddressFormContinueButton = page.locator('#address_1').getByTitle('Continue');
+      this.newAddressForm = page.locator('#Address2Frm');
+      this.newAddressFirstNameField = page.locator('#Address2Frm_firstname');
+      this.newAddressLastNameField = page.locator('#Address2Frm_lastname');
+      this.newAddressAddressField = page.locator('#Address2Frm_address_1');
+      this.newAddressCityField = page.locator('#Address2Frm_city');
+      this.newAddressStateOption = page.locator('#Address2Frm_zone_id');
+      this.newAddressZipField = page.locator('#Address2Frm_postcode');
+      this.newAddressCountryOption = page.locator('#Address2Frm_country_id');
+      this.newAddressContinueButton = page.locator('#Address2Frm').getByTitle('Continue');
     }
 
     async clickActualAddressFormContinueButton(){
@@ -44,31 +44,31 @@ export class PurchaseNewAddress{
     }
 
     async fillNewAddressFirstNameField(){
-      await this.newAddressFirstNameField.fill(newAddress.newFirstName);
+      await this.newAddressFirstNameField.fill(newAddressVariables.newFirstName);
     }
 
     async fillNewAddressLastNameField(){
-      await this.newAddressLastNameField.fill(newAddress.newLastName);
+      await this.newAddressLastNameField.fill(newAddressVariables.newLastName);
     }
 
     async fillNewAddressAddressField(){
-      await this.newAddressAddressField.fill(newAddress.newAddress);
+      await this.newAddressAddressField.fill(newAddressVariables.newAddress);
     }
 
     async fillNewAddressCityField(){
-      await this.newAddressCityField.fill(newAddress.newCity);
+      await this.newAddressCityField.fill(newAddressVariables.newCity);
     }
 
     async selectNewAddressRegionOption(){
-      await this.newAddressStateOption.selectOption(newAddress.newRegion);
+      await this.newAddressStateOption.selectOption(newAddressVariables.newRegion);
     }
 
     async fillNewAddressZipCodeField(){
-      await this.newAddressZipField.fill(newAddress.newZIP);
+      await this.newAddressZipField.fill(newAddressVariables.newZIP);
     }
 
     async selectNewAddressCountryOption(){
-      await this.newAddressCountryOption.selectOption(newAddress.newCountry);
+      await this.newAddressCountryOption.selectOption(newAddressVariables.newCountry);
     }
 
     async clickNewAddressContinueButton(){

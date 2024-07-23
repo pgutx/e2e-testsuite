@@ -1,5 +1,9 @@
 import { type Locator, type Page } from '@playwright/test';
 
+export const quantity = {
+  quantityField: 2
+}
+
 export class PurchaseBasket{
     readonly page:  Page;
     readonly cartSection: Locator;
@@ -19,6 +23,7 @@ export class PurchaseBasket{
     readonly estimateFormState: Locator;
     readonly estimateFormZip: Locator;
     readonly estimateFormButton: Locator;
+    readonly estimateFormShippings: Locator;
     readonly totalTable: Locator;
     readonly continueButton: Locator;
     readonly checkoutButtonBot: Locator;
@@ -42,6 +47,7 @@ export class PurchaseBasket{
       this.estimateFormState = page.locator('#estimate_country_zones');
       this.estimateFormZip = page.locator('#estimate_postcode');
       this.estimateFormButton = page.getByTitle('Estimate');
+      this.estimateFormShippings = page.locator('#shippings');
       this.totalTable = page.locator('#totals_table');
       this.continueButton = page.getByRole('link', { name: ' Continue Shopping' });
       this.checkoutButtonBot = page.locator('#cart_checkout2');
@@ -52,7 +58,7 @@ export class PurchaseBasket{
     }
 
     async fillCartQuantityField(){
-      await this.quantityField.fill('2');
+      await this.quantityField.fill(`${quantity.quantityField}`);
     }
 
     async clickRemoveButton(){

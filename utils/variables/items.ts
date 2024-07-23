@@ -1,3 +1,3 @@
 export const items = {
-    firstFeaturedItemPrice: '$29.50',
+    firstFeaturedItemPrice: 29.50,
 }

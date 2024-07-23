@@ -14,6 +14,7 @@ export default defineConfig({
   testDir: './e2e',
   /* Run tests in files in parallel */
   fullyParallel: true,
+  timeout: 7 * 60 * 1000,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -39,9 +40,9 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
-      // storageState: 'playwright/.auth/user.json',
+      storageState: 'playwright/.auth/user.json',
       },
-      // dependencies: ['setup'],
+      dependencies: ['setup'],
     },
 
     // {

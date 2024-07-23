@@ -1,5 +1,6 @@
 import { test, expect } from '../utils/fixtures/fixtures';
 import { urls } from '../utils/variables/url';
+import { title } from '../utils/variables/title';
 import { user } from '../utils/variables/user';
 import { newUser } from '../pages/login-pages/create';
 
@@ -17,6 +18,18 @@ test('Scenario: Clicking Login or register button whilst on the homepage', async
 
 });
 
+test('Scenario: Validate Login page title', async ({ headerTop }) => {
+
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
+
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.loginTitle);
+  });
+
+});
+
 test('Scenario: Proceeding with the registration on the login page', async ({ headerTop, loginPage }) => {
 
   await test.step('Navigate to the login page', async() => {
@@ -29,6 +42,22 @@ test('Scenario: Proceeding with the registration on the login page', async ({ he
 
   await test.step('AC: The button should lead to correct page', async() => {
     await expect(loginPage.page).toHaveURL(urls.createNewAccount);
+  });
+
+});
+
+test('Scenario: Validate Account creation page title', async ({ headerTop, loginPage }) => {
+
+  await test.step('Navigate to the login page', async() => {
+    await headerTop.clickLoginButton();
+  });
+
+  await test.step('Navigate to the registration page', async() => {
+    await loginPage.clickContinueRegistrationButton();
+  });
+
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.createAccount);
   });
 
 });

@@ -52,7 +52,7 @@ export class HomePageHeaderTop {
       this.categoryHairCare = page.locator('#category_52');
       this.categoryBooks = page.locator('#category_65');
       this.searchButton = page.getByTitle('Go');
-      this.currencyField = page.locator('a').filter({ hasText: '$ US Dollar' }).first();
+      this.currencyField = page.locator('.block_6').getByRole('list');
       this.euro = page.getByRole('link', { name: '€ Euro' });
       this.sterling = page.getByRole('link', { name: '£ Pound Sterling' });
       this.dollar = page.getByRole('link', { name: '$ US Dollar' });
