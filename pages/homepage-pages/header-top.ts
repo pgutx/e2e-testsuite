@@ -3,9 +3,21 @@ import { type Locator, type Page } from '@playwright/test';
 export class HomePageHeaderTop {
     readonly page: Page;
     readonly logo: Locator;
-    readonly login: Locator;
+    readonly customer: Locator;
+    readonly accountDashboard: Locator;
+    readonly myWishList: Locator;
+    readonly editAccountDetails: Locator;
+    readonly changePassword: Locator;
+    readonly manageAddressBook: Locator;
+    readonly orderHistory: Locator;
+    readonly transactionHistory: Locator;
+    readonly downloads: Locator;
+    readonly notifications: Locator;
+    readonly customerLogout: Locator;
     readonly specials: Locator;
     readonly account: Locator;
+    readonly order: Locator;
+    readonly accountLogout: Locator;
     readonly cart: Locator;
     readonly checkout: Locator;
     readonly searchField: Locator;
@@ -36,9 +48,21 @@ export class HomePageHeaderTop {
     constructor(page: Page){
       this.page = page;
       this.logo = page.locator('.logo');
-      this.login = page.getByRole('link', { name: 'Login or register' });
+      this.customer = page.locator('#customer_menu_top');
+      this.accountDashboard = page.getByRole('link', { name: '  Account Dashboard' });
+      this.myWishList = page.getByRole('link', { name: '   My wish list' })
+      this.editAccountDetails = page.getByRole('link', { name: '   Edit account details' });
+      this.changePassword = page.getByRole('link', { name: '   Change password' });
+      this.manageAddressBook = page.getByRole('link', { name: '   Manage Address Book' });
+      this.orderHistory = page.getByRole('link', { name: '   Order history' });
+      this.transactionHistory = page.getByRole('link', { name: '   Transaction history' });
+      this.downloads = page.getByRole('link', { name: '   Downloads' });
+      this.notifications = page.getByRole('link', { name: '   Notifications' });
+      this.customerLogout = page.locator('#customer_menu_top').getByRole('listitem').getByRole('list').getByRole('listitem').last().locator('a');
       this.specials = page.getByRole('link', { name: '  Specials' });
       this.account = page.getByRole('link', { name: '  Account' });
+      this.order = page.getByRole('link', { name: '  Check Your Order' });
+      this.accountLogout = page.locator('#main_menu_top').getByRole('list').locator('li').filter({ hasText: 'Logout' });
       this.cart = page.getByRole('link', { name: '  Cart' });
       this.checkout = page.getByRole('link', { name: '  Checkout' });
       this.searchField = page.getByPlaceholder('Search Keywords');
@@ -71,8 +95,52 @@ export class HomePageHeaderTop {
       await this.logo.click();
     }
 
-    async clickLoginButton(){
-      await this.login.click();
+    async clickCustomerButton(){
+      await this.customer.click();
+    }
+
+    async hoverCustomerButton(){
+      await this.customer.hover();
+    }
+
+    async clickAccountDashboardButton(){
+      await this.accountDashboard.click();
+    }
+
+    async clickWishListButton(){
+      await this.myWishList.click();
+    }
+
+    async clickAccountDetailsButton(){
+      await this.editAccountDetails.click();
+    }
+
+    async clickChangePasswordButton(){
+      await this.changePassword.click();
+    }
+
+    async clickManageAddressBookButton(){
+      await this.manageAddressBook.click();
+    }
+
+    async clickOrderHistoryButton(){
+      await this.orderHistory.click();
+    }
+
+    async clickTransactionHistoryButton(){
+      await this.transactionHistory.click();
+    }
+
+    async clickDownloadsButton(){
+      await this.downloads.click();
+    }
+
+    async clickNotificationsButton(){
+      await this.notifications.click();
+    }
+
+    async clickCustomerLogoffButton(){
+      await this.customerLogout.click();
     }
 
     async clickSpecialsButton(){
@@ -81,6 +149,10 @@ export class HomePageHeaderTop {
 
     async clickAccountButton(){
       await this.account.click();
+    }
+
+    async hoverAccountButton(){
+      await this.account.hover();
     }
 
     async clickCartButton(){

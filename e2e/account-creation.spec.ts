@@ -9,7 +9,7 @@ test.use({ storageState: { cookies: [], origins: [] } });
 test('Scenario: Clicking Login or register button whilst on the homepage', async ({ headerTop }) => {
 
   await test.step('AC: The button can be clicked', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('AC: The button should lead to correct page', async() => {
@@ -21,7 +21,7 @@ test('Scenario: Clicking Login or register button whilst on the homepage', async
 test('Scenario: Validate Login page title', async ({ headerTop }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('AC: The page has correct title', async() => {
@@ -33,7 +33,7 @@ test('Scenario: Validate Login page title', async ({ headerTop }) => {
 test('Scenario: Proceeding with the registration on the login page', async ({ headerTop, loginPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
   
   await test.step('AC: The button can be clicked', async() => {
@@ -49,7 +49,7 @@ test('Scenario: Proceeding with the registration on the login page', async ({ he
 test('Scenario: Validate Account creation page title', async ({ headerTop, loginPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -65,7 +65,7 @@ test('Scenario: Validate Account creation page title', async ({ headerTop, login
 test('Scenario: Filling out First Name field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -85,7 +85,7 @@ test('Scenario: Filling out First Name field during registration', async ({ head
 test('Scenario: Filling out Last Name field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -105,7 +105,7 @@ test('Scenario: Filling out Last Name field during registration', async ({ heade
 test('Scenario: Filling out Email field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -125,7 +125,7 @@ test('Scenario: Filling out Email field during registration', async ({ headerTop
 test('Scenario: Filling out Address 1 field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -145,7 +145,7 @@ test('Scenario: Filling out Address 1 field during registration', async ({ heade
 test('Scenario: Filling out City field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -165,7 +165,7 @@ test('Scenario: Filling out City field during registration', async ({ headerTop,
 test('Scenario: Choosing country option during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -185,7 +185,7 @@ test('Scenario: Choosing country option during registration', async ({ headerTop
 test('Scenario: Choosing region option during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -209,7 +209,7 @@ test('Scenario: Choosing region option during registration', async ({ headerTop,
 test('Scenario: Filling out ZIP code field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -229,7 +229,7 @@ test('Scenario: Filling out ZIP code field during registration', async ({ header
 test('Scenario: Filling out Login field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -249,7 +249,7 @@ test('Scenario: Filling out Login field during registration', async ({ headerTop
 test('Scenario: Filling out Password field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -269,7 +269,7 @@ test('Scenario: Filling out Password field during registration', async ({ header
 test('Scenario: Filling out Confirm password field during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -289,7 +289,7 @@ test('Scenario: Filling out Confirm password field during registration', async (
 test('Scenario: Clicking Subscribe to Newsletter button during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -309,7 +309,7 @@ test('Scenario: Clicking Subscribe to Newsletter button during registration', as
 test('Scenario: Accepting Privacy Policy during registration', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -329,7 +329,7 @@ test('Scenario: Accepting Privacy Policy during registration', async ({ headerTo
 test('Scenario: Registering an account', async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
-    await headerTop.clickLoginButton();
+    await headerTop.clickCustomerButton();
   });
 
   await test.step('Navigate to the registration page', async() => {
@@ -358,6 +358,12 @@ test('Scenario: Registering an account', async ({ headerTop, loginPage, createPa
 
   await test.step('AC: Clicking the button registers the user', async() => {
     await expect(createPage.page).toHaveURL(urls.registerSuccess);
+  });
+
+  await test.step('Logging out', async () => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickCustomerLogoffButton();
+    await expect(headerTop.page).toHaveURL(urls.loggingOut);
   });
 
 });
