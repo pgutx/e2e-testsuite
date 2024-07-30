@@ -1,11 +1,8 @@
 import { type Locator, type Page } from '@playwright/test';
 import { newAddressVariables } from '../../utils/variables/address';
 
-
-export class PurchaseNewAddress{
+export class AccountInsertNewAddress{
     readonly page: Page;
-    readonly actualAddressForm: Locator;
-    readonly actualAddressFormContinueButton: Locator;
     readonly newAddressForm: Locator;
     readonly newAddressFirstNameField: Locator;
     readonly newAddressLastNameField: Locator;
@@ -14,25 +11,25 @@ export class PurchaseNewAddress{
     readonly newAddressStateOption: Locator;
     readonly newAddressZipField: Locator;
     readonly newAddressCountryOption: Locator;
+    readonly newAddressDefaultAddress: Locator;
     readonly newAddressContinueButton: Locator;
+    readonly backButton: Locator;
+    readonly successAddressAlert: Locator;
 
     constructor(page: Page){
       this.page = page;
-      this.actualAddressForm = page.locator('#address_1');
-      this.actualAddressFormContinueButton = page.locator('#address_1').getByTitle('Continue');
-      this.newAddressForm = page.locator('#Address2Frm');
-      this.newAddressFirstNameField = page.locator('#Address2Frm_firstname');
-      this.newAddressLastNameField = page.locator('#Address2Frm_lastname');
-      this.newAddressAddressField = page.locator('#Address2Frm_address_1');
-      this.newAddressCityField = page.locator('#Address2Frm_city');
-      this.newAddressStateOption = page.locator('#Address2Frm_zone_id');
-      this.newAddressZipField = page.locator('#Address2Frm_postcode');
-      this.newAddressCountryOption = page.locator('#Address2Frm_country_id');
-      this.newAddressContinueButton = page.locator('#Address2Frm').getByTitle('Continue');
-    }
-
-    async clickActualAddressFormContinueButton(){
-      await this.actualAddressFormContinueButton.click();
+      this.newAddressForm = page.locator('#AddressFrm');
+      this.newAddressFirstNameField = page.locator('#AddressFrm_firstname');
+      this.newAddressLastNameField = page.locator('#AddressFrm_lastname');
+      this.newAddressAddressField = page.locator('#AddressFrm_address_1');
+      this.newAddressCityField = page.locator('#AddressFrm_city');
+      this.newAddressStateOption = page.locator('#AddressFrm_zone_id');
+      this.newAddressZipField = page.locator('#AddressFrm_postcode');
+      this.newAddressCountryOption = page.locator('#AddressFrm_country_id');
+      this.newAddressDefaultAddress = page.locator('#AddressFrm_default1');
+      this.newAddressContinueButton = page.locator('#AddressFrm').getByTitle('Continue');
+      this.backButton = page.getByRole('link', { name: ' Back' });
+      this.successAddressAlert = page.getByText('Your address has been successfully inserted');
     }
 
     async fillNewAddressFirstNameField(){
@@ -61,6 +58,14 @@ export class PurchaseNewAddress{
 
     async selectNewAddressCountryOption(){
       await this.newAddressCountryOption.selectOption(newAddressVariables.newCountry);
+    }
+
+    async clickBackButton(){
+      await this.backButton.click();
+    }
+
+    async checkDefaultAddressRadioButton(){
+      await this.newAddressDefaultAddress.check();
     }
 
     async clickNewAddressContinueButton(){

@@ -1,6 +1,7 @@
 import { test, expect } from '../utils/fixtures/fixtures';
 import { urls } from '../utils/variables/url';
 import { title } from '../utils/variables/title';
+import { newAddressVariables } from '../utils/variables/address';
 
 test('Scenario: Expanding Welcome back user field whilst on the homepage', async ({ headerTop }) => {
 
@@ -239,6 +240,8 @@ test('Scenario: Clicking Account button whilst on the homepage', async ({ header
   });
 
 });
+
+test.describe('Account Dashboard Page', () => {
 
 test('Scenario: Checking out account dashboard section whilst on the account dashboard', async ({ headerTop, dashboard }) => {
 
@@ -544,4 +547,719 @@ test('Scenario: Clicking Notifications button whilst on the account dashboard', 
     await expect(dashboard.page).toHaveURL(urls.notifications);
   });
                     
+});
+
+test('Scenario: Clicking Home breadcrumb on the account dashboard', async ({ headerTop, dashboard }) => {
+
+  await test.step('Navigate to the account dashboard', async() => {
+    await headerTop.clickAccountButton();
+  });
+  
+  await test.step('AC: The button can be clicked', async() => {
+    await dashboard.clickHomeBreadcrumb();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(dashboard.page).toHaveURL('/');
+  });
+
+});
+
+});
+
+test.describe('Wish List Page', () => {
+
+  test.describe.configure({ mode: 'default' });
+
+test('Scenario: Checking out populated wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+
+  await test.step('Navigate to the item page', async() => {
+    await featured.hoverFirstItem();
+    await featured.clickFirstItemViewButton();
+  });
+  
+  await test.step('Add the item to the wishlist', async() => {
+    await skinsheenBronzeStickProduct.clickAddToWishList();
+  });
+
+  await test.step('Navigate to the wishlist page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickWishListButton();
+  });
+
+  await test.step('AC: The item is visible', async() => {
+    await expect(wishList.emptyWishList).not.toBeVisible();
+    await expect(wishList.populatedWishList).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking Item name whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+
+  await test.step('Navigate to the wishlist page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickWishListButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await wishList.clickItemName();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(wishList.page).toHaveURL(urls.firstFeaturedItem);
+  });
+
+});
+
+test('Scenario: Clicking View Cart Action button whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+
+  await test.step('Navigate to the wishlist page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickWishListButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await wishList.clickViewCartActionButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(wishList.page).toHaveURL(urls.cartPage);
+  });
+
+});
+
+test('Scenario: Clicking Continue shopping button whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+
+  await test.step('Navigate to the wishlist page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickWishListButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await wishList.clickContinueShoppingButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(wishList.page).toHaveURL('/');
+  });
+
+});
+
+test('Scenario: Clicking View Cart button whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+
+  await test.step('Navigate to the wishlist page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickWishListButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await wishList.clickViewCartButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(wishList.page).toHaveURL(urls.cartPage);
+  });
+
+});
+
+test('Scenario: Clicking Account breadcrumb on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+
+  await test.step('Navigate to the wishlist page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickWishListButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await wishList.clickAccountBreadcrumb();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(wishList.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+test('Scenario: Clicking Remove button whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+
+  await test.step('Navigate to the wishlist page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickWishListButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await wishList.clickRemoveItemActionButton();
+  });
+
+  await test.step('AC: The item is removed', async() => {
+    await expect(wishList.tableRemovedItem).not.toBeVisible();
+  });
+
+});
+
+});
+
+test.describe('My Account Information Page', () => {
+
+test('Scenario: Checking out account form section whilst on the my account information page', async ({ headerTop, accountInformation }) => {
+
+  await test.step('Navigate to the my account information page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickAccountDetailsButton();
+  });
+
+  await test.step('AC: The section is displayed', async() => {
+    await expect(accountInformation.accountFormSection).toBeVisible();
+  });
+
+});
+
+test('Scenario: Editing First Name field whilst on the My account information page', async ({ headerTop, accountInformation }) => {
+
+  await test.step('Navigate to the my account information page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickAccountDetailsButton();
+  });
+
+  await test.step('AC: The field is editable', async() => {
+    await accountInformation.fillAccountFormFirstNameField();
+  });
+
+  await test.step('AC: Correct data is displayed', async() => {
+    await expect(accountInformation.accountFormFirstNameField).toHaveValue('AccountInformationFirstName');
+  });
+
+});
+
+test('Scenario: Editing Last Name field whilst on the My account information page', async ({ headerTop, accountInformation }) => {
+
+  await test.step('Navigate to the my account information page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickAccountDetailsButton();
+  });
+
+  await test.step('AC: The field is editable', async() => {
+    await accountInformation.fillAccountFormLastNameField();
+  });
+
+  await test.step('AC: Correct data is displayed', async() => {
+    await expect(accountInformation.accountFormLastNameField).toHaveValue('AccountInformationLastName');
+  });
+
+});
+
+test('Scenario: Editing Email field whilst on the My account information page', async ({ headerTop, accountInformation }) => {
+
+  await test.step('Navigate to the my account information page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickAccountDetailsButton();
+  });
+
+  await test.step('AC: The field is editable', async() => {
+    await accountInformation.fillAccountFormEmailField();
+  });
+
+  await test.step('AC: Correct data is displayed', async() => {
+    await expect(accountInformation.accountFormEmailField).toHaveValue('AccountInformationEmail@test.com');
+  });
+
+});
+
+test('Scenario: Clicking Back button whilst on the My account information page', async ({ headerTop, accountInformation }) => {
+
+  await test.step('Navigate to the my account information page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickAccountDetailsButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountInformation.clickBackButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountInformation.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+test('Scenario: Clicking Account breadcrumb on the My account information page', async ({ headerTop, accountInformation }) => {
+
+  await test.step('Navigate to the my account information page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickAccountDetailsButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountInformation.clickAccountBreadcrumb();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountInformation.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+test('Scenario: Editing User information on the My account information page', async ({ headerTop, accountInformation }) => {
+
+  await test.step('Navigate to the my account information page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickAccountDetailsButton();
+  });
+
+  await test.step('AC: The fields are editable', async() => {
+    await accountInformation.fillAccountFormFirstNameField();
+    await accountInformation.fillAccountFormLastNameField();
+    await accountInformation.fillAccountFormEmailField();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountInformation.clickContinueButton();
+  });
+
+  await test.step('AC: Account details are updated', async() => {
+    await expect(accountInformation.successAccountUpdateAlert).toBeVisible();
+  });
+
+});
+
+});
+
+test.describe('Change Password Page', () => {
+
+test('Scenario: Checking out change password form whilst on the Change password page', async ({ headerTop, accountChangePassword }) => {
+
+  await test.step('Navigate to the change password page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickChangePasswordButton();
+  });
+
+  await test.step('AC: The section is displayed', async() => {
+    await expect(accountChangePassword.changePasswordForm).toBeVisible();
+  });
+
+});
+
+test('Scenario: Editing Current password field whilst on the Change password page', async ({ headerTop, accountChangePassword }) => {
+
+  await test.step('Navigate to the change password page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickChangePasswordButton();
+  });
+
+  await test.step('AC: The field can be filled out', async() => {
+    await accountChangePassword.fillCurrentPasswordField();
+  });
+
+  await test.step('AC: The field is not empty', async() => {
+    await expect(accountChangePassword.currentPasswordField).not.toBeEmpty();
+  });
+
+});
+
+test('Scenario: Editing New password field whilst on the Change password page', async ({ headerTop, accountChangePassword }) => {
+
+  await test.step('Navigate to the change password page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickChangePasswordButton();
+  });
+
+  await test.step('AC: The field can be filled out', async() => {
+    await accountChangePassword.fillNewPasswordField();
+  });
+
+  await test.step('AC: The field is not empty', async() => {
+    await expect(accountChangePassword.newPasswordField).not.toBeEmpty();
+  });
+
+});
+
+test('Scenario: Editing New password confirm field whilst on the Change password page', async ({ headerTop, accountChangePassword }) => {
+
+  await test.step('Navigate to the change password page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickChangePasswordButton();
+  });
+
+  await test.step('AC: The field can be filled out', async() => {
+    await accountChangePassword.fillNewPasswordConfirmField();
+  });
+
+  await test.step('AC: The field is not empty', async() => {
+    await expect(accountChangePassword.newPasswordConfirmField).not.toBeEmpty();
+  });
+
+});
+
+test('Scenario: Clicking back button whilst on the Change password page', async ({ headerTop, accountChangePassword }) => {
+
+  await test.step('Navigate to the change password page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickChangePasswordButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountChangePassword.clickBackButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountChangePassword.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+test('Scenario: Clicking Account breadcrumb on the Change password page', async ({ headerTop, accountChangePassword }) => {
+
+  await test.step('Navigate to the change password page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickChangePasswordButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountChangePassword.clickAccountBreadcrumb();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountChangePassword.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+test('Scenario: Editing password on the Change password page', async ({ headerTop, accountChangePassword }) => {
+
+  await test.step('Navigate to the change password page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickChangePasswordButton();
+  });
+
+  await test.step('AC: The fields are editable', async() => {
+    await accountChangePassword.fillCurrentPasswordField();
+    await accountChangePassword.fillNewPasswordField();
+    await accountChangePassword.fillNewPasswordConfirmField();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountChangePassword.clickContinueButton();
+  });
+
+  await test.step('AC: Account details are updated', async() => {
+    await expect(accountChangePassword.successPasswordChangeAlert).toBeVisible();
+  });
+
+});
+
+});
+
+test.describe('Manage Address Book Page', () => {
+
+test('Scenario: Checking out address book entries section whilst on the Address Book page', async ({ headerTop, accountAddressBook }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('AC: The section is displayed', async() => {
+    await expect(accountAddressBook.addressBookEntries).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking Edit button whilst on the Address Book page', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountAddressBook.clickEditAddressButton();
+  });
+
+  await test.step('AC: The edit address form is visible', async() => {
+    await expect(accountInsertNewAddress.newAddressForm).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking Account breadcrumb on the Address Book page', async ({ headerTop, accountAddressBook }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountAddressBook.clickAccountBreadcrumb();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountAddressBook.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+test('Scenario: Clicking Back button on the Address Book page', async ({ headerTop, accountAddressBook }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountAddressBook.clickBackButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountAddressBook.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+test('Scenario: Clicking New address button whilst on the Address book page', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountAddressBook.page).toHaveURL(urls.insertNewAddress);
+  });
+
+  await test.step('AC: The new address form is visible', async() => {
+    await expect(accountInsertNewAddress.newAddressForm).toBeVisible();
+  });
+
+});
+
+test('Scenario: Filling out First Name field whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The field can be filled out', async() => {
+    await accountInsertNewAddress.fillNewAddressFirstNameField();
+  });
+
+  await test.step('AC: The field is filled with correct data', async() => {
+    await expect(accountInsertNewAddress.newAddressFirstNameField).toHaveValue(newAddressVariables.newFirstName);
+  });
+
+});
+
+test('Scenario: Filling out Last Name field whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The field can be filled out', async() => {
+    await accountInsertNewAddress.fillNewAddressLastNameField();
+  });
+
+  await test.step('AC: The field is filled with correct data', async() => {
+    await expect(accountInsertNewAddress.newAddressLastNameField).toHaveValue(newAddressVariables.newLastName);
+  });
+
+});
+
+test('Scenario: Filling out Address 1 field whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The field can be filled out', async() => {
+    await accountInsertNewAddress.fillNewAddressAddressField();
+  });
+
+  await test.step('AC: The field is filled with correct data', async() => {
+    await expect(accountInsertNewAddress.newAddressAddressField).toHaveValue(newAddressVariables.newAddress);
+  });
+
+});
+
+test('Scenario: Filling out City field whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The field can be filled out', async() => {
+    await accountInsertNewAddress.fillNewAddressCityField();
+  });
+
+  await test.step('AC: The field is filled with correct data', async() => {
+    await expect(accountInsertNewAddress.newAddressCityField).toHaveValue(newAddressVariables.newCity);
+  });
+
+});
+
+test('Scenario: Choosing Country option whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The options can be picked', async() => {
+    await accountInsertNewAddress.selectNewAddressCountryOption();
+  });
+
+  await test.step('AC: Correct option is picked', async() => {
+    await expect(accountInsertNewAddress.newAddressCountryOption).toHaveValue(newAddressVariables.newCountry);
+  });
+
+});
+
+test('Scenario: Filling out ZIP field whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The options can be picked', async() => {
+    await accountInsertNewAddress.fillNewAddressZipCodeField();
+  });
+
+  await test.step('AC: Correct option is picked', async() => {
+    await expect(accountInsertNewAddress.newAddressZipField).toHaveValue(newAddressVariables.newZIP);
+  });
+
+});
+
+test('Scenario: Choosing Region/State option whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The options can be picked', async() => {
+    await accountInsertNewAddress.selectNewAddressCountryOption();
+
+    await accountInsertNewAddress.selectNewAddressRegionOption();
+  });
+
+  await test.step('AC: Correct option is picked', async() => {
+    await expect(accountInsertNewAddress.newAddressStateOption).toHaveValue(newAddressVariables.newRegion);
+  });
+
+});
+
+test('Scenario: Clicking Default address radio button whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The radio button can be clicked', async() => {
+    await accountInsertNewAddress.checkDefaultAddressRadioButton();
+  });
+
+  await test.step('AC: The radio button is checked', async() => {
+    await expect(accountInsertNewAddress.newAddressDefaultAddress).toBeChecked();
+  });
+
+});
+
+test('Scenario: Clicking Back button whilst adding new address', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: The radio button can be clicked', async() => {
+    await accountInsertNewAddress.clickBackButton();
+  });
+
+  await test.step('AC: The radio button is checked', async() => {
+    await expect(accountInsertNewAddress.page).toHaveURL(urls.manageAddressBook);
+  });
+
+});
+
+test('Scenario: Adding new address via the form', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+
+  await test.step('Navigate to the address book page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickManageAddressBookButton();
+  });
+
+  await test.step('Navigate to insert new address page', async() => {
+    await accountAddressBook.clickNewAddressButton();
+  });
+
+  await test.step('AC: Each of the field is fillable', async() => {
+    await accountInsertNewAddress.fillNewAddressFirstNameField();
+    await accountInsertNewAddress.fillNewAddressLastNameField();
+    await accountInsertNewAddress.fillNewAddressAddressField();
+    await accountInsertNewAddress.fillNewAddressCityField();
+    await accountInsertNewAddress.selectNewAddressCountryOption();
+    await accountInsertNewAddress.selectNewAddressRegionOption();
+    await accountInsertNewAddress.fillNewAddressZipCodeField();
+    await accountInsertNewAddress.checkDefaultAddressRadioButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountInsertNewAddress.clickNewAddressContinueButton();
+  });
+
+  await test.step('AC: Clicking the button adds an address', async() => {
+    await expect(accountInsertNewAddress.successAddressAlert).toBeVisible();
+  });
+
+});
+
+});
+
+test.describe('My Order History Page', () => {
+
 });

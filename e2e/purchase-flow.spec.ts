@@ -3,7 +3,7 @@ import { urls } from '../utils/variables/url';
 import { title } from '../utils/variables/title';
 import { items } from '../utils/variables/items';
 import { quantity } from '../pages/purchase-flow-pages/basket';
-import { newAddressVariables } from '../pages/purchase-flow-pages/new-address';
+import { newAddressVariables } from '../utils/variables/address';
 
 test('Scenario: Clicking Cart button whilst on the homepage', async ({ headerTop }) => {
 

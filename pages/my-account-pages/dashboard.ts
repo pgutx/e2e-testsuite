@@ -23,6 +23,7 @@ export class AccountDashboard{
   readonly rightColumnTransactionHistory: Locator;
   readonly rightColumnDownloads: Locator;
   readonly rightColumnNotifications: Locator;
+  readonly homeBreadcrumb: Locator;
 
   constructor(page: Page){
     this.page = page;
@@ -47,6 +48,7 @@ export class AccountDashboard{
     this.rightColumnTransactionHistory = page.getByRole('link', { name: '   Transaction history' });
     this.rightColumnDownloads = page.getByRole('link', { name: '   Downloads' });
     this.rightColumnNotifications = page.getByRole('link', { name: '   Notifications' });
+    this.homeBreadcrumb = page.locator('.breadcrumb').getByRole('link', { name: 'Home' });
   }
 
   async clickEditAccountTile(){
@@ -115,6 +117,10 @@ export class AccountDashboard{
 
   async clickNotificationsButton(){
     await this.rightColumnNotifications.click();
+  }
+
+  async clickHomeBreadcrumb(){
+    await this.homeBreadcrumb.click();
   }
 
 }

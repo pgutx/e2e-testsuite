@@ -17,6 +17,12 @@ import { test as paymentTest } from '../fixtures/purchase-flow-fixtures/payment-
 import { test as shippingTest } from '../fixtures/purchase-flow-fixtures/shipping-fixture';
 import { test as newAddressTest } from '../fixtures/purchase-flow-fixtures/new-address-fixture';
 import { test as accountDashboardTest } from '../fixtures/account-fixtures/dashboard-fixture';
+import { test as accountWishListTest } from '../fixtures/account-fixtures/wish-list-fixture';
+import { test as accountInformationTest } from '../fixtures/account-fixtures/my-account-information-fixture';
+import { test as accountChangePasswordTest } from '../fixtures/account-fixtures/change-password-fixture';
+import { test as accountManageAddressBookTest } from '../fixtures/account-fixtures/manage-address-book-fixture';
+import { test as accountInsertNewAddressTest } from '../fixtures/account-fixtures/insert-new-address-fixture';
+import { test as productFirstFeaturedTest } from '../fixtures/product-fixtures/first-featured-item-fixture';
 
 
 export const test = mergeTests(homepageTest, 
@@ -35,7 +41,13 @@ export const test = mergeTests(homepageTest,
                                shippingTest,
                                newAddressTest,
                                checkoutTest,
-                               accountDashboardTest
+                               accountDashboardTest,
+                               accountWishListTest,
+                               accountInformationTest,
+                               accountChangePasswordTest,
+                               accountManageAddressBookTest,
+                               accountInsertNewAddressTest,
+                               productFirstFeaturedTest,
                                );
 
 export { expect } from '@playwright/test';
