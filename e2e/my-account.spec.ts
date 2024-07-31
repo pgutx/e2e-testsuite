@@ -38,181 +38,181 @@ test('Scenario: Clicking Welcome back user field whilst on the homepage', async 
 
 test('Scenario: Clicking Account Dashboard button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickAccountDashboardButton();
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickAccountDashboardButton();
+  });
         
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.accountPage);
-    });
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.accountPage);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.myAccount);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.myAccount);
+  });
     
 });
 
 test('Scenario: Clicking My Wish list button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickWishListButton();
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickWishListButton();
+  });
         
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.wishlistPage);
-    });
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.wishlistPage);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.myWishList);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.myWishList);
+  });
     
 });
 
 test('Scenario: Clicking Edit Account Details button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickAccountDetailsButton();
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickAccountDetailsButton();
+  });
         
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.editAccountDetails);
-    });
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.editAccountDetails);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.myAccountInformation);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.myAccountInformation);
+  });
     
 });
 
 test('Scenario: Clicking Change password button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickChangePasswordButton();
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickChangePasswordButton();
+  });
         
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.changePassword);
-    });
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.changePassword);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.changePassword);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.changePassword);
+  });
     
 });
 
 test('Scenario: Clicking Manage Address Book button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickManageAddressBookButton();
-    });
-        
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.manageAddressBook);
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickManageAddressBookButton();
+  });
+      
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.manageAddressBook);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.manageAddressBook);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.manageAddressBook);
+  });
     
 });
 
 test('Scenario: Clicking Order History button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickOrderHistoryButton();
-    });
-        
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.orderHistory);
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickOrderHistoryButton();
+  });
+      
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.orderHistory);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.orderHistory);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.orderHistory);
+  });
     
 });
 
 test('Scenario: Clicking Transaction History button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickTransactionHistoryButton();
-    });
-        
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.transactionHistory);
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickTransactionHistoryButton();
+  });
+      
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.transactionHistory);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.transactionHistory);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.transactionHistory);
+  });
     
 });
 
 test('Scenario: Clicking Downloads button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickDownloadsButton();
-    });
-        
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.downloads);
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickDownloadsButton();
+  });
+      
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.downloads);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.downloads);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.downloads);
+  });
     
 });
 
 test('Scenario: Clicking Notifications button whilst hovering over the Welcome back button', async ({ headerTop }) => {
 
-    await test.step('Hover over the Welcome Back user button', async() => {
-      await headerTop.hoverCustomerButton();
-    });
+  await test.step('Hover over the Welcome Back user button', async() => {
+    await headerTop.hoverCustomerButton();
+  });
 
-    await test.step('AC: The button can be clicked', async() => {
-      await headerTop.clickNotificationsButton();
-    });
-        
-    await test.step('AC: The button should lead to correct page', async() => {
-      await expect(headerTop.page).toHaveURL(urls.notifications);
-    });
+  await test.step('AC: The button can be clicked', async() => {
+    await headerTop.clickNotificationsButton();
+  });
+      
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(headerTop.page).toHaveURL(urls.notifications);
+  });
 
-    await test.step('AC: The page has correct title', async() => {
-      await expect(headerTop.page).toHaveTitle(title.notifications);
-    });
+  await test.step('AC: The page has correct title', async() => {
+    await expect(headerTop.page).toHaveTitle(title.notifications);
+  });
     
 });
 
@@ -233,7 +233,7 @@ test('Scenario: Clicking Account button whilst on the homepage', async ({ header
 
   await test.step('AC: The button can be clicked', async() => {
     await headerTop.clickAccountButton();
-    });
+  });
         
   await test.step('AC: The button should lead to correct page', async() => {
     await expect(headerTop.page).toHaveURL(urls.accountPage);
@@ -1261,5 +1261,207 @@ test('Scenario: Adding new address via the form', async ({ headerTop, accountAdd
 });
 
 test.describe('My Order History Page', () => {
+
+  test.describe.configure({ mode: 'default' });
+
+test('Scenario: Order is visible whilst on the My Order History page', async ({ featured, headerTop, checkout, accountOrderHistory }) => {
+
+  await test.step('Add an item to the cart', async() => {
+    await featured.clickFirstItemCartButton();
+  });
+
+  await test.step('Go to the checkout page', async() => {
+    await headerTop.clickCheckoutButton();
+  });
+
+  await test.step('Complete the order', async() => {
+    await checkout.clickConfirmOrderButton();
+    await checkout.page.waitForTimeout(1000);
+  });
+
+  await test.step('Navigate to the Order History page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickOrderHistoryButton();
+  });
+
+  await test.step('The order is visible', async() => {
+    await expect(accountOrderHistory.orderSection).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking View button whilst on the My Order History page', async ({ headerTop, accountOrderHistory }) => {
+
+  await test.step('Navigate to the Order History page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickOrderHistoryButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountOrderHistory.clickViewButton();
+  });
+
+  await test.step('AC: The invoice details are visible', async() => {
+    await expect(accountOrderHistory.invoice).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking Continue button whilst on the My Order History page', async ({ headerTop, accountOrderHistory }) => {
+
+  await test.step('Navigate to the Order History page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickOrderHistoryButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountOrderHistory.clickContinueButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountOrderHistory.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+});
+
+test.describe('My Transactions Page', () => {
+
+test('Scenario: Checking out the My Transactions section on the My Transaction page', async ({ headerTop, accountMyTransactions }) => {
+
+  await test.step('Navigate to the My Transactions page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickTransactionHistoryButton();
+  });
+
+  await test.step('AC: The section is displayed', async() => {
+    await expect(accountMyTransactions.transactionSection).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking Continue button whilst on the My Transactions page', async ({ headerTop, accountMyTransactions }) => {
+
+  await test.step('Navigate to the My Transactions page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickTransactionHistoryButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountMyTransactions.clickContinueButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountMyTransactions.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+});
+
+test.describe('My Downloads Page', () => {
+
+test('Scenario: Checking out the My Transactions section on the My Transaction page', async ({ headerTop, accountMyDownloads }) => {
+
+  await test.step('Navigate to the My Transactions page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickDownloadsButton();
+  });
+
+  await test.step('AC: The section is displayed', async() => {
+    await expect(accountMyDownloads.downloadsSection).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking Continue button whilst on the My Transactions page', async ({ headerTop, accountMyDownloads }) => {
+
+  await test.step('Navigate to the My Transactions page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickDownloadsButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountMyDownloads.clickContinueButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountMyDownloads.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+});
+
+test.describe('Notifications and Newsletter Page', () => {
+
+test('Scenario: Checking out the Notifications and Newsletter section on the Notifcations and Newsletter page', async ({ headerTop, accountNotifications }) => {
+
+  await test.step('Navigate to the Notifications and Newsletter page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickNotificationsButton();
+  });
+
+  await test.step('AC: The section is displayed', async() => {
+    await expect(accountNotifications.notificationSection).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking Newsletter checkbox whilst on the Notifications and Newsletter page', async ({ headerTop, accountNotifications }) => {
+
+  await test.step('Navigate to the Notifications and Newsletter page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickNotificationsButton();
+  });
+
+  await test.step('AC: The checkbox can be interacted with', async() => {
+    await accountNotifications.tickNewsletterCheckbox();
+  });
+
+  await test.step('AC: The checkbox is ticked', async() => {
+    await expect(accountNotifications.newsletterCheckbox).toBeChecked();
+  });
+
+});
+
+test('Scenario: Clicking Back button whilst on the Notifications and Newsletter page', async ({ headerTop, accountNotifications }) => {
+
+  await test.step('Navigate to the Notifications and Newsletter page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickNotificationsButton();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountNotifications.clickBackButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(accountNotifications.page).toHaveURL(urls.accountPage);
+  });
+
+});
+
+test('Scenario: Updating Newsletter settings whilst on the Notifications and Newsletter page', async ({ headerTop, accountNotifications }) => {
+
+  await test.step('Navigate to the Notifications and Newsletter page', async() => {
+    await headerTop.hoverCustomerButton();
+    await headerTop.clickNotificationsButton();
+  });
+
+  await test.step('Click the Newsletter checkbox', async() => {
+    await accountNotifications.tickNewsletterCheckbox();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await accountNotifications.clickContinueButton();
+  });
+
+  await test.step('AC: The setting was updated', async() => {
+    await expect(accountNotifications.successAlert).toBeVisible();
+  });
+
+});
 
 });

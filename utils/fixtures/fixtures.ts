@@ -22,6 +22,10 @@ import { test as accountInformationTest } from '../fixtures/account-fixtures/my-
 import { test as accountChangePasswordTest } from '../fixtures/account-fixtures/change-password-fixture';
 import { test as accountManageAddressBookTest } from '../fixtures/account-fixtures/manage-address-book-fixture';
 import { test as accountInsertNewAddressTest } from '../fixtures/account-fixtures/insert-new-address-fixture';
+import { test as accountOrderHistoryTest } from '../fixtures/account-fixtures/order-history-fixture';
+import { test as accountMyTransactionsTest } from '../fixtures/account-fixtures/transactions-fixture';
+import { test as accountMyDownloadsTest } from '../fixtures/account-fixtures/downloads-fixture';
+import { test as accountNotificationsTest } from '../fixtures/account-fixtures/notifications-fixture';
 import { test as productFirstFeaturedTest } from '../fixtures/product-fixtures/first-featured-item-fixture';
 
 
@@ -47,6 +51,10 @@ export const test = mergeTests(homepageTest,
                                accountChangePasswordTest,
                                accountManageAddressBookTest,
                                accountInsertNewAddressTest,
+                               accountOrderHistoryTest,
+                               accountMyTransactionsTest,
+                               accountMyDownloadsTest,
+                               accountNotificationsTest,
                                productFirstFeaturedTest,
                                );
 
