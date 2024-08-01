@@ -59,7 +59,7 @@ export class HomePageHeaderTop {
       this.downloads = page.getByRole('link', { name: '   Downloads' });
       this.notifications = page.getByRole('link', { name: '   Notifications' });
       this.customerLogout = page.locator('#customer_menu_top').getByRole('listitem').getByRole('list').getByRole('listitem').last().locator('a');
-      this.specials = page.getByRole('link', { name: '  Specials' });
+      this.specials = page.getByRole('link', { name: '  Specials' });
       this.account = page.getByRole('link', { name: '  Account' });
       this.order = page.getByRole('link', { name: '  Check Your Order' });
       this.accountLogout = page.locator('#main_menu_top').getByRole('list').locator('li').filter({ hasText: 'Logout' });
@@ -86,9 +86,9 @@ export class HomePageHeaderTop {
       this.itemTotalPrice = page.locator('.total');
       this.viewCart = page.getByTitle('View Cart');
       this.viewCheckout = page.getByTitle('Checkout');
-      this.facebook = page.getByTitle('Facebook');
-      this.twitter = page.getByTitle('Twitter');
-      this.linkedin = page.getByTitle('Linkedin');
+      this.facebook = page.getByRole('banner').getByRole('link', { name: 'Facebook' })
+      this.twitter = page.getByRole('banner').getByRole('link', { name: 'Twitter' })
+      this.linkedin = page.getByRole('banner').getByRole('link', { name: 'LinkedIn' })
     }
 
     async clickHomepageLogo(){
@@ -165,6 +165,10 @@ export class HomePageHeaderTop {
 
     async clickSearchField(){
       await this.searchField.click();
+    }
+
+    async fillSearchField(){
+      await this.searchField.fill('keyword');
     }
 
     async clickCategoriesAll(){

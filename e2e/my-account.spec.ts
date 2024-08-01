@@ -1276,7 +1276,7 @@ test('Scenario: Order is visible whilst on the My Order History page', async ({ 
 
   await test.step('Complete the order', async() => {
     await checkout.clickConfirmOrderButton();
-    await checkout.page.waitForTimeout(1000);
+    await checkout.page.waitForURL(urls.placeOrderSuccess);
   });
 
   await test.step('Navigate to the Order History page', async() => {

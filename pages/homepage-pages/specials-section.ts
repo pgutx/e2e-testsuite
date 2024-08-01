@@ -4,7 +4,7 @@ export class HomePageSpecials {
     readonly page: Page;
     readonly specialsSection: Locator;
     readonly firstItem: Locator;
-    readonly firstitemName: Locator;
+    readonly firstItemName: Locator;
     readonly firstItemImg: Locator;
     readonly firstItemViewButton: Locator;
     readonly firstItemReviewButton: Locator;
@@ -27,7 +27,7 @@ export class HomePageSpecials {
       this.page = page;
       this.specialsSection = page.locator('#special');
       this.firstItem = page.locator('#block_frame_special_1772').getByText('Absolue Eye Precious Cells View Write Review $89.00 $');
-      this.firstitemName = page.locator('#block_frame_special_1772').getByRole('link', { name: 'Absolue Eye Precious Cells' });
+      this.firstItemName = page.locator('#block_frame_special_1772').getByRole('link', { name: 'Absolue Eye Precious Cells' });
       this.firstItemImg = page.locator('.thumbnail > a').nth(12).locator('img');
       this.firstItemViewButton = page.getByRole('link', { name: 'View', exact: true });
       this.firstItemReviewButton = page.getByRole('link', { name: 'Write Review' });
@@ -48,7 +48,7 @@ export class HomePageSpecials {
     }
 
     async clickFirstItemName(){
-      await this.firstitemName.click();
+      await this.firstItemName.click();
     }
 
     async hoverFirstItem(){

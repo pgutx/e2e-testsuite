@@ -73,6 +73,10 @@ export class HomePageFooter {
       await this.subscribeNewsletterField.fill('email@example.com');
     }
 
+    async clickSubscribeNewsletterButton(){
+      await this.subscribeNewsletterButton.click();
+    }
+
     async clickAboutUsButton(){
       await this.aboutUsButton.click();
     }

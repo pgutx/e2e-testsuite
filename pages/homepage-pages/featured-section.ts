@@ -4,7 +4,7 @@ export class HomePageFeatured {
     readonly page: Page;
     readonly featuredSection: Locator;
     readonly firstItem: Locator;
-    readonly firstitemName: Locator;
+    readonly firstItemName: Locator;
     readonly firstItemImg: Locator;
     readonly firstItemViewButton: Locator;
     readonly firstItemReviewButton: Locator;
@@ -23,7 +23,7 @@ export class HomePageFeatured {
       this.page = page;
       this.featuredSection = page.locator('#featured');
       this.firstItem = page.locator('#block_frame_featured_1769').getByText('Skinsheen Bronzer Stick View');
-      this.firstitemName = page.locator('#block_frame_featured_1769').getByRole('link', { name: 'Skinsheen Bronzer Stick' });
+      this.firstItemName = page.locator('#block_frame_featured_1769').getByRole('link', { name: 'Skinsheen Bronzer Stick' });
       this.firstItemImg = page.locator('.thumbnail > a').first().locator('img');
       this.firstItemViewButton = page.getByRole('link', { name: 'View', exact: true });
       this.firstItemReviewButton = page.getByRole('link', { name: 'Write Review' });
@@ -40,7 +40,7 @@ export class HomePageFeatured {
     }
 
     async clickFirstItemName(){
-      await this.firstitemName.click();
+      await this.firstItemName.click();
     }
 
     async hoverFirstItem(){

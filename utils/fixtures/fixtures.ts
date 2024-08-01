@@ -27,6 +27,10 @@ import { test as accountMyTransactionsTest } from '../fixtures/account-fixtures/
 import { test as accountMyDownloadsTest } from '../fixtures/account-fixtures/downloads-fixture';
 import { test as accountNotificationsTest } from '../fixtures/account-fixtures/notifications-fixture';
 import { test as productFirstFeaturedTest } from '../fixtures/product-fixtures/first-featured-item-fixture';
+import { test as productFirstLatestTest } from '../fixtures/product-fixtures/first-latest-item-fixture';
+import { test as productFirstBestsellersTest } from '../fixtures/product-fixtures/first-bestsellers-item-fixture';
+import { test as productFirstSpecialsTest } from '../fixtures/product-fixtures/first-specials-item-fixture';
+import { test as searchPageTest } from '../fixtures/search-fixtures/search-fixture';
 
 
 export const test = mergeTests(homepageTest, 
@@ -56,6 +60,10 @@ export const test = mergeTests(homepageTest,
                                accountMyDownloadsTest,
                                accountNotificationsTest,
                                productFirstFeaturedTest,
+                               productFirstLatestTest,
+                               productFirstBestsellersTest,
+                               productFirstSpecialsTest,
+                               searchPageTest
                                );
 
 export { expect } from '@playwright/test';

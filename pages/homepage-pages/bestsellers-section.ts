@@ -4,7 +4,7 @@ export class HomePageBestsellers {
     readonly page: Page;
     readonly bestsellersSection: Locator;
     readonly firstItem: Locator;
-    readonly firstitemName: Locator;
+    readonly firstItemName: Locator;
     readonly firstItemImg: Locator;
     readonly firstItemViewButton: Locator;
     readonly firstItemReviewButton: Locator;
@@ -23,7 +23,7 @@ export class HomePageBestsellers {
       this.page = page;
       this.bestsellersSection = page.locator('#bestseller');
       this.firstItem = page.getByText('Casual 3/4 Sleeve Baseball T-Shirt View Write Review $');
-      this.firstitemName = page.getByRole('link', { name: 'Casual 3/4 Sleeve Baseball T-' });
+      this.firstItemName = page.getByRole('link', { name: 'Casual 3/4 Sleeve Baseball T-' });
       this.firstItemImg = page.locator('.thumbnail > a').nth(8).locator('img');
       this.firstItemViewButton = page.getByRole('link', { name: 'View', exact: true });
       this.firstItemReviewButton = page.getByRole('link', { name: 'Write Review' });
@@ -40,7 +40,7 @@ export class HomePageBestsellers {
     }
 
     async clickFirstItemName(){
-      await this.firstitemName.click();
+      await this.firstItemName.click();
     }
 
     async hoverFirstItem(){

@@ -988,7 +988,7 @@ test('Scenario: Validate Shipping page title', async ({ headerTop, basket, check
   });
 
   await test.step('AC: Correct Title is displayed', async() => {
-    await expect(checkout.page).toHaveTitle(title.shippingTitle);
+    await expect(checkout.page).toHaveTitle(title.shippingAddressTitle);
   });
 
   await test.step('Cleanup', async() => {

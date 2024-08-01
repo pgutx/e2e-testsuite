@@ -4,7 +4,7 @@ export class HomePageLatest {
     readonly page: Page;
     readonly latestSection: Locator;
     readonly firstItem: Locator;
-    readonly firstitemName: Locator;
+    readonly firstItemName: Locator;
     readonly firstItemImg: Locator;
     readonly firstItemViewButton: Locator;
     readonly firstItemReviewButton: Locator;
@@ -22,7 +22,7 @@ export class HomePageLatest {
       this.page = page;
       this.latestSection = page.locator('#latest');
       this.firstItem = page.getByText('Absolute Anti-Age Spot Replenishing Unifying TreatmentSPF 15 View Write Review Out of Stock $');
-      this.firstitemName = page.getByRole('link', { name: 'Absolute Anti-Age Spot' });
+      this.firstItemName = page.getByRole('link', { name: 'Absolute Anti-Age Spot' });
       this.firstItemImg = page.locator('.thumbnail > a').nth(4).locator('img');
       this.firstItemViewButton = page.getByRole('link', { name: 'View', exact: true });
       this.firstItemReviewButton = page.getByRole('link', { name: 'Write Review' });
@@ -38,7 +38,7 @@ export class HomePageLatest {
     }
 
     async clickFirstItemName(){
-      await this.firstitemName.click();
+      await this.firstItemName.click();
     }
 
     async hoverFirstItem(){
