@@ -594,7 +594,7 @@ test('Scenario: Checking out populated wishlist page', async ({ featured, skinsh
 
 });
 
-test('Scenario: Clicking Item name whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Clicking Item name whilst on the wishlist page', async ({ headerTop, wishList }) => {
 
   await test.step('Navigate to the wishlist page', async() => {
     await headerTop.hoverCustomerButton();
@@ -611,7 +611,7 @@ test('Scenario: Clicking Item name whilst on the wishlist page', async ({ featur
 
 });
 
-test('Scenario: Clicking View Cart Action button whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Clicking View Cart Action button whilst on the wishlist page', async ({ headerTop, wishList }) => {
 
   await test.step('Navigate to the wishlist page', async() => {
     await headerTop.hoverCustomerButton();
@@ -628,7 +628,7 @@ test('Scenario: Clicking View Cart Action button whilst on the wishlist page', a
 
 });
 
-test('Scenario: Clicking Continue shopping button whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Clicking Continue shopping button whilst on the wishlist page', async ({ headerTop, wishList }) => {
 
   await test.step('Navigate to the wishlist page', async() => {
     await headerTop.hoverCustomerButton();
@@ -645,7 +645,7 @@ test('Scenario: Clicking Continue shopping button whilst on the wishlist page', 
 
 });
 
-test('Scenario: Clicking View Cart button whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Clicking View Cart button whilst on the wishlist page', async ({ headerTop, wishList }) => {
 
   await test.step('Navigate to the wishlist page', async() => {
     await headerTop.hoverCustomerButton();
@@ -662,7 +662,7 @@ test('Scenario: Clicking View Cart button whilst on the wishlist page', async ({
 
 });
 
-test('Scenario: Clicking Account breadcrumb on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Clicking Account breadcrumb on the wishlist page', async ({ headerTop, wishList }) => {
 
   await test.step('Navigate to the wishlist page', async() => {
     await headerTop.hoverCustomerButton();
@@ -679,7 +679,7 @@ test('Scenario: Clicking Account breadcrumb on the wishlist page', async ({ feat
 
 });
 
-test('Scenario: Clicking Remove button whilst on the wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Clicking Remove button whilst on the wishlist page', async ({ headerTop, wishList }) => {
 
   await test.step('Navigate to the wishlist page', async() => {
     await headerTop.hoverCustomerButton();

@@ -63,4 +63,5 @@ export const title = {
     shippingAddressTitle: 'Delivery Information',
     paymentTitle: 'Payment Information',
     newAddressTitle: 'Checkout Address',
+    firstFeaturedItemTitle: 'Skinsheen Bronzer Stick'
 }

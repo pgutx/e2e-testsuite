@@ -184,13 +184,13 @@ test('Scenario: Adding Featured section first item to the cart', async ({ header
   });
   
   await test.step('AC: Successfull box should be visible', async() => {
-    await expect.soft(featured.itemAddedToCart).toBeVisible();
+    await expect(featured.itemAddedToCart).toBeVisible();
   });
 
   await test.step('AC: Cart dropdown should not be empty', async() => {
     await headerTop.hoverCartPopup();
 
-    await expect.soft(headerTop.emptyCartPopup).not.toBeVisible();
+    await expect(headerTop.emptyCartPopup).not.toBeVisible();
   });
 
   await test.step('Cleanup', async() => {
@@ -207,13 +207,13 @@ test('Scenario: Adding Featured section last item to the cart', async ({ headerT
   });
   
   await test.step('AC: Successfull box should be visible', async() => {
-    await expect.soft(featured.itemAddedToCart).toBeVisible();
+    await expect(featured.itemAddedToCart).toBeVisible();
   });
 
   await test.step('AC: Cart dropdown should not be empty', async() => {
     await headerTop.hoverCartPopup();
 
-    await expect.soft(headerTop.emptyCartPopup).not.toBeVisible();
+    await expect(headerTop.emptyCartPopup).not.toBeVisible();
   });
 
 });
@@ -225,13 +225,13 @@ test('Scenario: Adding Bestseller section first item to the cart', async ({ head
   });
   
   await test.step('AC: Successfull box should be visible', async() => {
-    await expect.soft(bestsellers.itemAddedToCart).toBeVisible();
+    await expect(bestsellers.itemAddedToCart).toBeVisible();
   });
 
   await test.step('AC: Cart dropdown should not be empty', async() => {
     await headerTop.hoverCartPopup();
 
-    await expect.soft(headerTop.emptyCartPopup).not.toBeVisible();
+    await expect(headerTop.emptyCartPopup).not.toBeVisible();
   });
   
 });
@@ -243,13 +243,13 @@ test('Scenario: Adding Bestseller section last item to the cart', async ({ heade
   });
   
   await test.step('AC: Successfull box should be visible', async() => {
-    await expect.soft(bestsellers.itemAddedToCart).toBeVisible();
+    await expect(bestsellers.itemAddedToCart).toBeVisible();
   });
 
   await test.step('AC: Cart dropdown should not be empty', async() => {
     await headerTop.hoverCartPopup();
 
-    await expect.soft(headerTop.emptyCartPopup).not.toBeVisible();
+    await expect(headerTop.emptyCartPopup).not.toBeVisible();
   });
 
   await test.step('Cleanup', async() => {
@@ -266,13 +266,13 @@ test('Scenario: Adding Specials section first item to the cart', async ({ header
   });
   
   await test.step('AC: Successfull box should be visible', async() => {
-    await expect.soft(specials.itemAddedToCart).toBeVisible();
+    await expect(specials.itemAddedToCart).toBeVisible();
   });
 
   await test.step('AC: Cart dropdown should not be empty', async() => {
     await headerTop.hoverCartPopup();
 
-    await expect.soft(headerTop.emptyCartPopup).not.toBeVisible();
+    await expect(headerTop.emptyCartPopup).not.toBeVisible();
   });
 
   await test.step('Cleanup', async() => {
@@ -295,7 +295,7 @@ test('Scenario: Clicking Checkout button whilst on the homepage after adding an 
   });
 
   await test.step('AC: The button should lead to correct page', async() => {
-    await expect.soft(headerTop.page).toHaveURL(urls.checkoutPage);
+    await expect(headerTop.page).toHaveURL(urls.checkoutPage);
   });
 
   await test.step('Cleanup', async() => {
