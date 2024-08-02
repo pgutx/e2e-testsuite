@@ -48,7 +48,7 @@ export const title = {
     siteMapTitle: 'Site Map',
     loginTitle: 'Account Login',
     createAccount: 'Create Account',
-    specialPage: 'Special Offers',
+    specialsPage: 'Special Offers',
     myAccount: 'My Account',
     myWishList: 'My wish list',
     myAccountInformation: 'My Account Information',

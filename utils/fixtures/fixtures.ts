@@ -30,6 +30,7 @@ import { test as productFirstFeaturedTest } from '../fixtures/product-fixtures/f
 import { test as productFirstLatestTest } from '../fixtures/product-fixtures/first-latest-item-fixture';
 import { test as productFirstBestsellersTest } from '../fixtures/product-fixtures/first-bestsellers-item-fixture';
 import { test as productFirstSpecialsTest } from '../fixtures/product-fixtures/first-specials-item-fixture';
+import { test as specialsPageTest } from '../fixtures/product-fixtures/specials-page-fixture';
 import { test as searchPageTest } from '../fixtures/search-fixtures/search-fixture';
 
 
@@ -63,6 +64,7 @@ export const test = mergeTests(homepageTest,
                                productFirstLatestTest,
                                productFirstBestsellersTest,
                                productFirstSpecialsTest,
+                               specialsPageTest,
                                searchPageTest
                                );
 

@@ -74,4 +74,12 @@ export const urls = {
     newPaymentAddress: '/index.php?rt=checkout/address/payment',
     insertNewAddress: '/index.php?rt=account/address/insert',
     placeOrderSuccess: '/index.php?rt=checkout/success',
+    filterDateAsc: '/index.php?rt=product/special&sort=date_modified-ASC&limit=20',
+    filterNameAsc: '/index.php?rt=product/special&sort=pd.name-ASC&limit=20',
+    filterNameDesc: '/index.php?rt=product/special&sort=pd.name-DESC&limit=20',
+    filterPriceAsc: '/index.php?rt=product/special&sort=p.price-ASC&limit=20',
+    filterPriceDesc: '/index.php?rt=product/special&sort=p.price-DESC&limit=20',
+    filterRatingDesc: '/index.php?rt=product/special&sort=rating-DESC&limit=20',
+    filterRatingAsc: '/index.php?rt=product/special&sort=rating-ASC&limit=20',
+    filterDateDesc: '/index.php?rt=product/special&sort=date_modified-DESC&limit=20'
 };

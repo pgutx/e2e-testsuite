@@ -32,7 +32,7 @@ test('Scenario: Clicking the Specials button whilst on the homepage', async ({ h
   });
 
   await test.step('AC: Correct Title is displayed', async() => {
-    await expect(headerTop.page).toHaveTitle(title.specialPage);
+    await expect(headerTop.page).toHaveTitle(title.specialsPage);
   });
 
 });
