@@ -54,13 +54,13 @@ export class SpecialsPage{
       this.itemSectionGrid = page.locator('.contentpanel').locator('div.thumbnails:nth-child(2)');
       this.itemSectionList = page.locator('.contentpanel').locator('div.thumbnails:nth-child(3)');
       this.itemName = page.getByTitle('Absolue Eye Precious Cells');
-      this.itemImage = page.locator('.contentpanel').locator('div').nth(1).locator('div').nth(1).locator('.thumbnail').locator('img');
-      this.itemSaleTag = page.locator('.contentpanel').locator('div').nth(1).locator('div').nth(1).locator('.thumbnail').locator('.sale');
+      this.itemImage = page.locator('div:nth-child(2) > .thumbnail > a');
+      this.itemSaleTag = page.locator('div:nth-child(2) > .thumbnail > .sale');
       this.itemViewButton = page.getByRole('link', { name: 'View', exact: true });
       this.itemReviewButton = page.getByRole('link', { name: 'Write Review' });
-      this.itemOldPrice = page.locator('.contentpanel').locator('div').nth(1).locator('div').nth(1).getByText('$105.00');
-      this.itemNewPrice = page.locator('.contentpanel').locator('div').nth(1).locator('div').nth(1).getByText('$89.00');
-      this.itemCartButton = page.locator('.contentpanel').locator('div').nth(1).locator('div').nth(1).getByTitle('Add to Cart');
+      this.itemOldPrice = page.getByText('$105.00').first();
+      this.itemNewPrice = page.getByText('$89.00').first();
+      this.itemCartButton = page.getByRole('link', { name: '' }).first();
     }
 
     async clickHomeBreadcrumb(){
@@ -107,23 +107,23 @@ export class SpecialsPage{
       await this.displayGridButton.click();
     }
 
-    async clickLimitTenOption(){
+    async selectLimitTenOption(){
       await this.limitItemOption.selectOption('10');
     }
 
-    async clickLimitTwentyOption(){
+    async selectLimitTwentyOption(){
       await this.limitItemOption.selectOption('20');
     }
 
-    async clickLimitThirtyOption(){
+    async selectLimitThirtyOption(){
       await this.limitItemOption.selectOption('30');
     }
 
-    async clickLimitFourtyOption(){
+    async selectLimitFourtyOption(){
       await this.limitItemOption.selectOption('40');
     }
 
-    async clickLimitFiftyOption(){
+    async selectLimitFiftyOption(){
       await this.limitItemOption.selectOption('50');
     }
 

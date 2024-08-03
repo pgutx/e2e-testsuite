@@ -130,18 +130,175 @@ test('Scenario: Choosing Item display option whilst on the specials page', async
       
   await test.step('AC: The button can be clicked - List', async() => {
     await specialsPage.clickListDisplayButton();
+    await specialsPage.itemSectionGrid.waitFor({state: 'hidden'});
   });
 
-  await test.step('AC: The item display section is changed - List', async() => {
+  await test.step('AC: The item section is changed - List', async() => {
     await expect(specialsPage.itemSectionList).toBeVisible();
   });
 
   await test.step('AC: The button can be clicked - Grid', async() => {
     await specialsPage.clickGridDisplayButton();
+    await specialsPage.itemSectionList.waitFor({state: 'hidden'});
   });
 
-  await test.step('AC: The item display section is changed - Grid', async() => {
+  await test.step('AC: The item section is changed - Grid', async() => {
     await expect(specialsPage.itemSectionGrid).toBeVisible();
+  });
+
+});
+
+test('Scenario: Choosing number of items per page option whilst on the specials page', async ({ headerTop, specialsPage }) => {
+
+  await test.step('Navigate to the specials page', async() => {
+    await headerTop.clickSpecialsButton();
+  });
+      
+  await test.step('AC: An option can be picked - 10 items', async() => {
+    await specialsPage.selectLimitTenOption();
+  });
+
+  await test.step('AC: Filtering is applied - 10 items', async() => {
+    await expect(specialsPage.page).toHaveURL(urls.filterDateAscTenItems);
+    await expect(specialsPage.limitTenOption).toHaveAttribute('selected');
+  });
+
+  await test.step('AC: An option can be picked - 20 items', async() => {
+    await specialsPage.selectLimitTwentyOption();
+  });
+
+  await test.step('AC: Filtering is applied - 20 items', async() => {
+    await expect(specialsPage.page).toHaveURL(urls.filterDateAscTwentyItems);
+    await expect(specialsPage.limitTwentyOption).toHaveAttribute('selected');
+  });
+
+  await test.step('AC: An option can be picked - 30 items', async() => {
+    await specialsPage.selectLimitThirtyOption();
+  });
+
+  await test.step('AC: Filtering is applied - 30 items', async() => {
+    await expect(specialsPage.page).toHaveURL(urls.filterDateAscThirtyItems);
+    await expect(specialsPage.limitThirtyOption).toHaveAttribute('selected');
+  });
+
+  await test.step('AC: An option can be picked - 40 items', async() => {
+    await specialsPage.selectLimitFourtyOption();
+  });
+
+  await test.step('AC: Filtering is applied - 40 items', async() => {
+    await expect(specialsPage.page).toHaveURL(urls.filterDateAscFourtyItems);
+    await expect(specialsPage.limitFourtyOption).toHaveAttribute('selected');
+  });
+
+  await test.step('AC: An option can be picked - 50 items', async() => {
+    await specialsPage.selectLimitFiftyOption();
+  });
+
+  await test.step('AC: Filtering is applied - 50 items', async() => {
+    await expect(specialsPage.page).toHaveURL(urls.filterDateAscFiftyItems);
+    await expect(specialsPage.limitFiftyOption).toHaveAttribute('selected');
+  });
+
+});
+
+test('Scenario: Checking out the item section whilst on the specials page', async ({ headerTop, specialsPage }) => {
+
+  await test.step('Navigate to the specials page', async() => {
+    await headerTop.clickSpecialsButton();
+  });
+      
+  await test.step('AC: The item section is displayed', async() => {
+    await expect(specialsPage.itemSectionGrid).toBeVisible();
+  });
+
+});
+
+test('Scenario: Checking out an item whilst on the specials page', async ({ headerTop, specialsPage }) => {
+
+  await test.step('Navigate to the specials page', async() => {
+    await headerTop.clickSpecialsButton();
+  });
+      
+  await test.step('AC: The item has correct elements displayed', async() => {
+    await expect(specialsPage.itemName).toBeVisible();
+    await expect(specialsPage.itemImage).toBeVisible();
+    await expect(specialsPage.itemSaleTag).toBeVisible();
+    await expect(specialsPage.itemNewPrice).toBeVisible();
+    await expect(specialsPage.itemOldPrice).toBeVisible();
+    await expect(specialsPage.itemCartButton).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking Item name in whilst on the specials page', async ({ headerTop, specialsPage }) => {
+
+  await test.step('Navigate to the specials page', async() => {
+    await headerTop.clickSpecialsButton();
+  });
+      
+  await test.step('AC: The name can be clicked', async() => {
+    await specialsPage.clickItemName();
+  });
+
+  await test.step('AC: The name should lead to correct page', async() => {
+    await expect(specialsPage.page).toHaveURL(urls.firstSpecialsItem);
+  });
+
+});
+
+test('Scenario: Hovering over an item whilst on the specials page', async ({ headerTop, specialsPage }) => {
+
+  await test.step('Navigate to the specials page', async() => {
+    await headerTop.clickSpecialsButton();
+  });
+      
+  await test.step('Hover over the item', async() => {
+    await specialsPage.hoverItem();
+  });
+
+  await test.step('AC: Correct buttons are visible', async() => {
+    await expect(specialsPage.itemViewButton).toBeVisible();
+    await expect(specialsPage.itemReviewButton).toBeVisible();
+  });
+
+});
+
+test('Scenario: Clicking View button of a hovered over item whilst on the specials page', async ({ headerTop, specialsPage }) => {
+
+  await test.step('Navigate to the specials page', async() => {
+    await headerTop.clickSpecialsButton();
+  });
+      
+  await test.step('Hover over the item', async() => {
+    await specialsPage.hoverItem();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await specialsPage.clickViewButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(specialsPage.page).toHaveURL(urls.firstSpecialsItem);
+  });
+
+});
+
+test('Scenario: Clicking Review button of a hovered over item whilst on the specials page', async ({ headerTop, specialsPage, absoluteEyeProduct }) => {
+
+  await test.step('Navigate to the specials page', async() => {
+    await headerTop.clickSpecialsButton();
+  });
+      
+  await test.step('Hover over the item', async() => {
+    await specialsPage.hoverItem();
+  });
+
+  await test.step('AC: The button can be clicked', async() => {
+    await specialsPage.clickReviewButton();
+  });
+
+  await test.step('AC: The button should lead to correct page', async() => {
+    await expect(absoluteEyeProduct.reviewForm).toBeVisible();
   });
 
 });

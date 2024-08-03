@@ -81,5 +81,10 @@ export const urls = {
     filterPriceDesc: '/index.php?rt=product/special&sort=p.price-DESC&limit=20',
     filterRatingDesc: '/index.php?rt=product/special&sort=rating-DESC&limit=20',
     filterRatingAsc: '/index.php?rt=product/special&sort=rating-ASC&limit=20',
-    filterDateDesc: '/index.php?rt=product/special&sort=date_modified-DESC&limit=20'
+    filterDateDesc: '/index.php?rt=product/special&sort=date_modified-DESC&limit=20',
+    filterDateAscTenItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=10',
+    filterDateAscTwentyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=20',
+    filterDateAscThirtyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=30',
+    filterDateAscFourtyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=40',
+    filterDateAscFiftyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=50'
 };
