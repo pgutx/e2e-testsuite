@@ -1,8 +1,7 @@
 import { test, expect } from '../utils/fixtures/fixtures';
 import { urls } from '../utils/variables/url';
-import { title } from '../utils/variables/title';
 
-test('Scenario: Clicking the Shoes link whilst on the Apparell and Accessories page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Clicking the Shoes link whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -18,7 +17,7 @@ test('Scenario: Clicking the Shoes link whilst on the Apparell and Accessories p
   
 });
 
-test('Scenario: Clicking the T-Shirts link whilst on the Apparell and Accessories page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Clicking the T-Shirts link whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -34,7 +33,7 @@ test('Scenario: Clicking the T-Shirts link whilst on the Apparell and Accessorie
 
 });
 
-test('Scenario: Clicking Home breadcrumb whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Clicking Home breadcrumb whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -50,7 +49,7 @@ test('Scenario: Clicking Home breadcrumb whilst on the specials page', async ({ 
 
 });
 
-test('Scenario: Choosing Sort option whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Choosing Sort option whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -130,7 +129,7 @@ test('Scenario: Choosing Sort option whilst on the specials page', async ({ head
 
 });
 
-test('Scenario: Choosing Item display option whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Choosing Item display option whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -156,7 +155,7 @@ test('Scenario: Choosing Item display option whilst on the specials page', async
 
 });
 
-test('Scenario: Choosing number of items per page option whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Choosing number of items per page option whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -209,7 +208,7 @@ test('Scenario: Choosing number of items per page option whilst on the specials 
 
 });
 
-test('Scenario: Checking out the item section whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Checking out the item section whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -221,7 +220,7 @@ test('Scenario: Checking out the item section whilst on the specials page', asyn
 
 });
 
-test('Scenario: Checking out an item whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Checking out an item whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -236,7 +235,7 @@ test('Scenario: Checking out an item whilst on the specials page', async ({ head
 
 });
 
-test('Scenario: Clicking Item name in whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Clicking Item name in whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -252,7 +251,7 @@ test('Scenario: Clicking Item name in whilst on the specials page', async ({ hea
 
 });
 
-test('Scenario: Hovering over an item whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Hovering over an item whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -269,7 +268,7 @@ test('Scenario: Hovering over an item whilst on the specials page', async ({ hea
 
 });
 
-test('Scenario: Clicking View button of a hovered over item whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Clicking View button of a hovered over item whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
@@ -289,7 +288,7 @@ test('Scenario: Clicking View button of a hovered over item whilst on the specia
 
 });
 
-test('Scenario: Clicking Write review button of a hovered over item whilst on the specials page', async ({ headerBot, categoryApparel }) => {
+test('Scenario: Clicking Write review button of a hovered over item whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
 
   await test.step('Navigate to the Apparel & Accessories page', async() => {
     await headerBot.clickApparelsButton();
