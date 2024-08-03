@@ -31,6 +31,7 @@ import { test as productFirstLatestTest } from '../fixtures/product-fixtures/fir
 import { test as productFirstBestsellersTest } from '../fixtures/product-fixtures/first-bestsellers-item-fixture';
 import { test as productFirstSpecialsTest } from '../fixtures/product-fixtures/first-specials-item-fixture';
 import { test as specialsPageTest } from '../fixtures/product-fixtures/specials-page-fixture';
+import { test as categoryApparelTest } from '../fixtures/category-fixtures/apparel-category-fixture';
 import { test as searchPageTest } from '../fixtures/search-fixtures/search-fixture';
 
 
@@ -65,6 +66,7 @@ export const test = mergeTests(homepageTest,
                                productFirstBestsellersTest,
                                productFirstSpecialsTest,
                                specialsPageTest,
+                               categoryApparelTest,
                                searchPageTest
                                );
 

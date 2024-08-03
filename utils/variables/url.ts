@@ -86,5 +86,18 @@ export const urls = {
     filterDateAscTwentyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=20',
     filterDateAscThirtyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=30',
     filterDateAscFourtyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=40',
-    filterDateAscFiftyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=50'
+    filterDateAscFiftyItems: '/index.php?rt=product/special&sort=date_modified-ASC&page=1&limit=50',
+    apparelFilterDateAsc: '/index.php?rt=product/category&path=68&sort=date_modified-ASC&limit=20',
+    apparelFilterNameAsc: '/index.php?rt=product/category&path=68&sort=pd.name-ASC&limit=20',
+    apparelFilterNameDesc: '/index.php?rt=product/category&path=68&sort=pd.name-DESC&limit=20',
+    apparelFilterPriceAsc: '/index.php?rt=product/category&path=68&sort=p.price-ASC&limit=20',
+    apparelFilterPriceDesc: '/index.php?rt=product/category&path=68&sort=p.price-DESC&limit=20',
+    apparelFilterRatingDesc: '/index.php?rt=product/category&path=68&sort=rating-DESC&limit=20',
+    apparelFilterRatingAsc: '/index.php?rt=product/category&path=68&sort=rating-ASC&limit=20',
+    apparelFilterDateDesc: '/index.php?rt=product/category&path=68&sort=date_modified-DESC&limit=20',
+    apparelFilterTenItems: '/index.php?rt=product/category&path=68&sort=date_modified-ASC&page=1&limit=10',
+    apparelFilterTwentyItems: '/index.php?rt=product/category&path=68&sort=date_modified-ASC&page=1&limit=20',
+    apparelFilterThirtyItems: '/index.php?rt=product/category&path=68&sort=date_modified-ASC&page=1&limit=30',
+    apparelFilterFourtyItems: '/index.php?rt=product/category&path=68&sort=date_modified-ASC&page=1&limit=40',
+    apparelFilterFiftyItems: '/index.php?rt=product/category&path=68&sort=date_modified-ASC&page=1&limit=50'
 };

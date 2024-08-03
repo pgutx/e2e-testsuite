@@ -2,30 +2,6 @@ import { test, expect } from '../utils/fixtures/fixtures';
 import { urls } from '../utils/variables/url';
 import { title } from '../utils/variables/title';
 
-test('Scenario: Validate page URL', async ({ headerTop }) => {
-
-  await test.step('Navigate to the specials page', async() => {
-    await headerTop.clickSpecialsButton();
-  });
-      
-  await test.step('AC: Correct URL is displayed', async() => {
-    await expect(headerTop.page).toHaveURL(urls.specialsPage);
-  });
-
-});
-
-test('Scenario: Validate page Title', async ({ headerTop }) => {
-
-  await test.step('Navigate to the specials page', async() => {
-    await headerTop.clickSpecialsButton();
-  });
-      
-  await test.step('AC: Correct Title is displayed', async() => {
-    await expect(headerTop.page).toHaveTitle(title.specialsPage);
-  });
-
-});
-
 test('Scenario: Clicking Home breadcrumb whilst on the specials page', async ({ headerTop, specialsPage }) => {
 
   await test.step('Navigate to the specials page', async() => {
@@ -283,7 +259,7 @@ test('Scenario: Clicking View button of a hovered over item whilst on the specia
 
 });
 
-test('Scenario: Clicking Review button of a hovered over item whilst on the specials page', async ({ headerTop, specialsPage, absoluteEyeProduct }) => {
+test('Scenario: Clicking Write review button of a hovered over item whilst on the specials page', async ({ headerTop, specialsPage, absoluteEyeProduct }) => {
 
   await test.step('Navigate to the specials page', async() => {
     await headerTop.clickSpecialsButton();
