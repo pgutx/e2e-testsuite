@@ -36,6 +36,7 @@ import { test as categoryMakeupTest } from '../fixtures/category-fixtures/makeup
 import { test as categorySkincareTest } from '../fixtures/category-fixtures/skincare-category-fixture';
 import { test as categoryFragranceTest } from '../fixtures/category-fixtures/fragrance-category-fixture';
 import { test as categoryMenTest } from '../fixtures/category-fixtures/men-category-fixture';
+import { test as categoryHaircareTest } from '../fixtures/category-fixtures/haircare-category-fixture';
 import { test as searchPageTest } from '../fixtures/search-fixtures/search-fixture';
 
 
@@ -75,6 +76,7 @@ export const test = mergeTests(homepageTest,
                                categorySkincareTest,
                                categoryFragranceTest,
                                categoryMenTest,
+                               categoryHaircareTest,
                                searchPageTest
                                );
 
