@@ -1,5 +1,6 @@
 export const title = {
     homepageTitle: 'A place to practice your automation skills!',
+    searchPage: 'Search',
     apparelTitle: 'Apparel & accessories',
     makeupTitle: 'Makeup',
     skincareTitle: 'Skincare',

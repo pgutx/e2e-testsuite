@@ -74,6 +74,7 @@ export const urls = {
     newPaymentAddress: '/index.php?rt=checkout/address/payment',
     insertNewAddress: '/index.php?rt=account/address/insert',
     placeOrderSuccess: '/index.php?rt=checkout/success',
+    emptySearchPage: '/index.php?rt=product/search&category_id=0',
     filterDateAsc: '/index.php?rt=product/special&sort=date_modified-ASC&limit=20',
     filterNameAsc: '/index.php?rt=product/special&sort=pd.name-ASC&limit=20',
     filterNameDesc: '/index.php?rt=product/special&sort=pd.name-DESC&limit=20',
