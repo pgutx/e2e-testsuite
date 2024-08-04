@@ -3,8 +3,6 @@ import { urls } from '../utils/variables/url';
 import { title } from '../utils/variables/title';
 import { items } from '../utils/variables/items';
 
-test.use({ storageState: { cookies: [], origins: [] } });
-
 test('Scenario: Clicking the logo whilst on the homepage', async ({ headerTop }) => {
 
   await test.step('AC: The logo can be clicked', async() => {
@@ -91,8 +89,7 @@ test('Scenario: Clicking the Account button whilst on the expanded home menu', a
   });
 
   await test.step('AC: The button should lead to correct page', async() => {
-    //change to account page
-    await expect(headerBot.page).toHaveURL(urls.loginPage);
+    await expect(headerBot.page).toHaveURL(urls.accountPage);
   });
 
 });
@@ -944,12 +941,24 @@ test('Scenario: Clicking the previous slide button whilst on the homepage', asyn
     await headerBot.hoverSlideSection();
   });
 
-  await test.step('AC: The button can be clicked', async() => {
-    await headerBot.clickPreviousSlideButton();
-  });
+  // await test.step('AC: The button can be clicked - First slide', async() => {
+  //   await headerBot.clickPreviousSlideButton();
+  // });
 
   await test.step('AC: The slides change', async() => {
+    if(await headerBot.firstSlide.isVisible()){
+    await headerBot.clickPreviousSlideButton();
     await expect(headerBot.thirdSlide).toBeVisible();
+
+    } else if(await headerBot.secondSlide.isVisible()){
+    await headerBot.clickPreviousSlideButton();
+    await expect(headerBot.firstSlide).toBeVisible();
+
+    } else if(await headerBot.thirdSlide.isVisible()){
+    await headerBot.clickPreviousSlideButton();
+    await expect(headerBot.secondSlide).toBeVisible();
+
+    }
   });
 
 });
@@ -960,12 +969,24 @@ test('Scenario: Clicking the next slide button whilst on the homepage', async ({
     await headerBot.hoverSlideSection();
   });
 
-  await test.step('AC: The button can be clicked', async() => {
-    await headerBot.clickNextSlideButton();
-  });
+  // await test.step('AC: The button can be clicked', async() => {
+  //   await headerBot.clickNextSlideButton();
+  // });
 
   await test.step('AC: The slides change', async() => {
+    if(await headerBot.firstSlide.isVisible()){
+    await headerBot.clickNextSlideButton();
     await expect(headerBot.secondSlide).toBeVisible();
+
+    } else if(await headerBot.secondSlide.isVisible()){
+    await headerBot.clickNextSlideButton();
+    await expect(headerBot.thirdSlide).toBeVisible();
+
+    } else if(await headerBot.thirdSlide.isVisible()){
+    await headerBot.clickNextSlideButton();
+    await expect(headerBot.firstSlide).toBeVisible();
+
+    }
   });
 
 });

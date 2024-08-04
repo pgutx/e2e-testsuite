@@ -44,6 +44,7 @@ import { test as footerPrivacyPolicyTest } from '../fixtures/footer-fixtures/pri
 import { test as footerReturnPolicyTest } from '../fixtures/footer-fixtures/return-policy-fixture';
 import { test as footerShippingInformationTest } from '../fixtures/footer-fixtures/shipping-information-fixture';
 import { test as footerContactUsTest } from '../fixtures/footer-fixtures/contact-us-fixture';
+import { test as footerSiteMapTest } from '../fixtures/footer-fixtures/site-map-fixture';
 
 
 export const test = mergeTests(homepageTest, 
@@ -90,6 +91,7 @@ export const test = mergeTests(homepageTest,
                                footerReturnPolicyTest,
                                footerShippingInformationTest,
                                footerContactUsTest,
+                               footerSiteMapTest
                                );
 
 export { expect } from '@playwright/test';

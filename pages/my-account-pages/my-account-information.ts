@@ -1,4 +1,5 @@
 import { type Locator, type Page } from '@playwright/test';
+import { randomInt } from "crypto"
 
 export class AccountInformation{
     readonly page: Page;
@@ -32,7 +33,7 @@ export class AccountInformation{
     }
 
     async fillAccountFormEmailField(){
-      await this.accountFormEmailField.fill('AccountInformationEmail@test.com');
+      await this.accountFormEmailField.fill('AccountInformationEmail' + randomInt(1, 5000) + '@test.com');
     }
 
     async clickBackButton(){

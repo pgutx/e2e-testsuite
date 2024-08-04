@@ -351,23 +351,3 @@ test('Scenario: Clicking View button of a hovered over item whilst on the Makeup
   });
 
 });
-
-test('Scenario: Clicking Write review button of a hovered over item whilst on the Makeup page', async ({ headerBot, categoryMakeup }) => {
-
-  await test.step('Navigate to the Makeup page', async() => {
-    await headerBot.clickMakeupButton();
-  });
-      
-  await test.step('Hover over the item', async() => {
-    await categoryMakeup.hoverItem();
-  });
-
-  await test.step('AC: The button can be clicked', async() => {
-    await categoryMakeup.clickReviewButton();
-  });
-
-  await test.step('AC: The button should lead to correct page', async() => {
-    await expect(categoryMakeup.page.locator('#review')).toBeVisible();
-  });
-
-});

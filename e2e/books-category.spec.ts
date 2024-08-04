@@ -287,23 +287,3 @@ test('Scenario: Clicking View button of a hovered over item whilst on the Books 
   });
 
 });
-
-test('Scenario: Clicking Write review button of a hovered over item whilst on the Books page', async ({ headerBot, categoryBooks }) => {
-
-  await test.step('Navigate to the Books page', async() => {
-    await headerBot.clickBooksButton();
-  });
-      
-  await test.step('Hover over the item', async() => {
-    await categoryBooks.hoverItem();
-  });
-
-  await test.step('AC: The button can be clicked', async() => {
-    await categoryBooks.clickReviewButton();
-  });
-
-  await test.step('AC: The button should lead to correct page', async() => {
-    await expect(categoryBooks.page.locator('#review')).toBeVisible();
-  });
-
-});

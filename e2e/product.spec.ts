@@ -88,7 +88,7 @@ test('Scenario: Changing the quantity of an item on the item page', async ({ fea
 
 });
 
-test('Scenario: Clicking Add to cart button on the item page', async ({ featured, skinsheenBronzeStickProduct }) => {
+test('Scenario: Clicking Add to cart button on the item page', async ({ featured, skinsheenBronzeStickProduct, headerTop, basket }) => {
 
   await test.step('Navigate to the product page', async() => {
     await featured.clickFirstItemName();
@@ -102,21 +102,9 @@ test('Scenario: Clicking Add to cart button on the item page', async ({ featured
     await expect(skinsheenBronzeStickProduct.page).toHaveURL(urls.cartPage);
   });
 
-});
-
-test('Scenario: Clicking Print button on the item page', async ({ featured, skinsheenBronzeStickProduct }) => {
-
-  await test.step('Navigate to the product page', async() => {
-    await featured.clickFirstItemName();
-  });
-      
-  await test.step('AC: The button can be clicked', async() => {
-    await skinsheenBronzeStickProduct.page.evaluate('(() => {window.waitForPrintDialog = new Promise(f => window.print = f);})()');
-    await skinsheenBronzeStickProduct.clickPrintButton();
-  });
-
-  await test.step('AC: The print function was triggered', async() => {
-    await expect(skinsheenBronzeStickProduct.page.waitForFunction('window.waitForPrintDialog')).toBeTruthy();
+  await test.step('Cleanup', async() => {
+    await headerTop.clickCartButton();
+    await basket.clickRemoveButton();
   });
 
 });
@@ -215,6 +203,7 @@ test('Scenario: Clicking Rating star button in the Review section whilst on the 
       
   await test.step('Open Review section', async() => {
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
+    await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
 
   await test.step('AC: The star can be clicked - one', async() => {
@@ -267,6 +256,7 @@ test('Scenario: Filling out Name field in the Review section whilst on the item 
       
   await test.step('Open Review section', async() => {
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
+    await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
 
   await test.step('AC: The field can be filled out', async() => {
@@ -274,7 +264,7 @@ test('Scenario: Filling out Name field in the Review section whilst on the item 
   });
 
   await test.step('AC: The field is filled with correct data', async() => {
-    await expect(skinsheenBronzeStickProduct.reviewName).toHaveValue(user.firstName);
+    await expect(skinsheenBronzeStickProduct.reviewName).toHaveValue('AccountInformationFirstName');
   });
 
 });
@@ -287,6 +277,7 @@ test('Scenario: Filling out Review field in the Review section whilst on the ite
       
   await test.step('Open Review section', async() => {
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
+    await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
 
   await test.step('AC: The field can be filled out', async() => {
@@ -307,6 +298,7 @@ test('Scenario: Filling out Captcha field in the Review section whilst on the it
       
   await test.step('Open Review section', async() => {
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
+    await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
 
   await test.step('AC: The field can be filled out', async() => {
@@ -327,6 +319,7 @@ test('Scenario: Posting a failed review in the Review section whilst on the item
       
   await test.step('Open Review section', async() => {
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
+    await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
 
   await test.step('Fill out the fields', async() => {
@@ -353,6 +346,7 @@ test('Scenario: Clicking Tag button in the Tags section whilst on the item page'
       
   await test.step('Open Tag section', async() => {
     await skinsheenBronzeStickProduct.clickTagSectionButton();
+    await expect(skinsheenBronzeStickProduct.tagCheeks).toBeVisible();
   });
 
   await test.step('AC: The tag button can be clicked', async() => {

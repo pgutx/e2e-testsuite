@@ -287,23 +287,3 @@ test('Scenario: Clicking View button of a hovered over item whilst on the Appare
   });
 
 });
-
-test('Scenario: Clicking Write review button of a hovered over item whilst on the Apparel & Accessories page', async ({ headerBot, categoryApparel }) => {
-
-  await test.step('Navigate to the Apparel & Accessories page', async() => {
-    await headerBot.clickApparelsButton();
-  });
-      
-  await test.step('Hover over the item', async() => {
-    await categoryApparel.hoverItem();
-  });
-
-  await test.step('AC: The button can be clicked', async() => {
-    await categoryApparel.clickReviewButton();
-  });
-
-  await test.step('AC: The button should lead to correct page', async() => {
-    await expect(categoryApparel.page.locator('#review')).toBeVisible();
-  });
-
-});

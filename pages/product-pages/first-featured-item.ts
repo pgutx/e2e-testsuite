@@ -121,7 +121,7 @@ export class ProductSkinsheenBronzeStick{
     }
 
     async fillNameField(){
-      await this.reviewName.fill(user.firstName);
+      await this.reviewName.fill('AccountInformationFirstName');
     }
 
     async fillReviewText(){

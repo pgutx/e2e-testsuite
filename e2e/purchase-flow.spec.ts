@@ -67,10 +67,15 @@ test('Scenario: Hovering over the currency field whilst on the homepage', async 
   
 });
 
-test('Scenario: Hovering over Cart dropdown whilst on the homepage', async ({ headerTop }) => {
+test('Scenario: Hovering over Cart dropdown whilst on the homepage', async ({ headerTop, basket }) => {
 
   await test.step('AC: The field can be interacted with', async() => {
     await headerTop.hoverCartPopup();
+    if(await headerTop.emptyCartPopup.isHidden()){
+      await headerTop.clickCartButton();
+      await basket.clickRemoveButton();
+      await headerTop.hoverCartPopup();
+    }
   });
   
   await test.step('AC: Correct elements are visible', async() => {

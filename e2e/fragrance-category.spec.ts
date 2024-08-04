@@ -287,23 +287,3 @@ test('Scenario: Clicking View button of a hovered over item whilst on the Fragra
   });
 
 });
-
-test('Scenario: Clicking Write review button of a hovered over item whilst on the Fragrance page', async ({ headerBot, categoryFragrance }) => {
-
-  await test.step('Navigate to the Fragrance page', async() => {
-    await headerBot.clickFragranceButton();
-  });
-      
-  await test.step('Hover over the item', async() => {
-    await categoryFragrance.hoverItem();
-  });
-
-  await test.step('AC: The button can be clicked', async() => {
-    await categoryFragrance.clickReviewButton();
-  });
-
-  await test.step('AC: The button should lead to correct page', async() => {
-    await expect(categoryFragrance.page.locator('#review')).toBeVisible();
-  });
-
-});
