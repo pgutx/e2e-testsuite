@@ -39,6 +39,10 @@ import { test as categoryMenTest } from '../fixtures/category-fixtures/men-categ
 import { test as categoryHaircareTest } from '../fixtures/category-fixtures/haircare-category-fixture';
 import { test as categoryBooksTest } from '../fixtures/category-fixtures/books-category-fixture';
 import { test as searchPageTest } from '../fixtures/search-fixtures/search-fixture';
+import { test as footerAboutUsTest } from '../fixtures/footer-fixtures/about-us-fixture';
+import { test as footerPrivacyPolicyTest } from '../fixtures/footer-fixtures/privacy-policy-fixture';
+import { test as footerReturnPolicyTest } from '../fixtures/footer-fixtures/return-policy-fixture';
+import { test as footerShippingInformationTest } from '../fixtures/footer-fixtures/shipping-information-fixture';
 
 
 export const test = mergeTests(homepageTest, 
@@ -79,7 +83,11 @@ export const test = mergeTests(homepageTest,
                                categoryMenTest,
                                categoryHaircareTest,
                                categoryBooksTest,
-                               searchPageTest
+                               searchPageTest,
+                               footerAboutUsTest,
+                               footerPrivacyPolicyTest,
+                               footerReturnPolicyTest,
+                               footerShippingInformationTest,
                                );
 
 export { expect } from '@playwright/test';
