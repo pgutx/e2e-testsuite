@@ -43,6 +43,7 @@ import { test as footerAboutUsTest } from '../fixtures/footer-fixtures/about-us-
 import { test as footerPrivacyPolicyTest } from '../fixtures/footer-fixtures/privacy-policy-fixture';
 import { test as footerReturnPolicyTest } from '../fixtures/footer-fixtures/return-policy-fixture';
 import { test as footerShippingInformationTest } from '../fixtures/footer-fixtures/shipping-information-fixture';
+import { test as footerContactUsTest } from '../fixtures/footer-fixtures/contact-us-fixture';
 
 
 export const test = mergeTests(homepageTest, 
@@ -88,6 +89,7 @@ export const test = mergeTests(homepageTest,
                                footerPrivacyPolicyTest,
                                footerReturnPolicyTest,
                                footerShippingInformationTest,
+                               footerContactUsTest,
                                );
 
 export { expect } from '@playwright/test';
