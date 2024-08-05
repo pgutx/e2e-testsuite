@@ -182,7 +182,7 @@ test('Scenario: Clicking Checkout button whilst hovering over the cart dropdown'
   
 });
 
-test('Scenario: Adding Featured section first item to the cart', async ({ headerTop, featured, basket }) => {
+test('Scenario: Adding Featured section first item to the cart', { tag: '@smoke' }, async ({ headerTop, featured, basket }) => {
 
   await test.step('AC: The button can be clicked', async() => {
     await featured.clickFirstItemCartButton();
@@ -407,7 +407,7 @@ test('Scenario: Clicking item name button on the cart page', async ({ headerTop,
   
 });
 
-test('Scenario: Changing the quantity of an added item on the cart page', async ({ headerTop, basket }) => {
+test('Scenario: Changing the quantity of an added item on the cart page', { tag: '@smoke' }, async ({ headerTop, basket }) => {
 
   await test.step('Click the cart button', async() => {
     await headerTop.clickCartButton();
@@ -433,7 +433,7 @@ test('Scenario: Changing the quantity of an added item on the cart page', async 
   
 });
 
-test('Scenario: Clicking Remove item button on the cart page', async ({ headerTop, basket }) => {
+test('Scenario: Clicking Remove item button on the cart page', { tag: '@smoke' }, async ({ headerTop, basket }) => {
 
   await test.step('Click the cart button', async() => {
     await headerTop.clickCartButton();
@@ -557,7 +557,7 @@ test('Scenario: Clicking continue shopping button on the cart page', async ({ he
   
 });
 
-test('Scenario: Clicking first Checkout button on the cart page', async ({ headerTop, basket }) => {
+test('Scenario: Clicking first Checkout button on the cart page', { tag: '@smoke' }, async ({ headerTop, basket }) => {
 
   await test.step('Click the cart button', async() => {
     await headerTop.clickCartButton();
@@ -599,7 +599,7 @@ test('Scenario: Clicking second Checkout button on the cart page', async ({ head
   
 });
 
-test('Scenario: Checkout confirmation is present on the checkout page', async ({ headerTop, basket, checkout }) => {
+test('Scenario: Checkout confirmation is present on the checkout page', { tag: '@smoke' }, async ({ headerTop, basket, checkout }) => {
 
   await test.step('Click the checkout button', async() => {
     await headerTop.clickCheckoutButton();
@@ -966,7 +966,7 @@ test('Scenario: Clicking Back button whilst on the checkout page', async ({ head
 
 });
 
-test('Scenario: Placing an order on the checkout page', async ({ headerTop, checkout }) => {
+test('Scenario: Placing an order on the checkout page', { tag: '@smoke' }, async ({ headerTop, checkout }) => {
 
   await test.step('Click the checkout button', async() => {
     await headerTop.clickCheckoutButton();
@@ -1203,7 +1203,7 @@ test('Scenario: Checking out New Address form on new shipping address page', asy
 
 });
 
-test('Scenario: Adding new shipping address', async ({ headerTop, basket, checkout, shipping, newAddress }) => {
+test('Scenario: Adding new shipping address', { tag: '@smoke' }, async ({ headerTop, basket, checkout, shipping, newAddress }) => {
 
   await test.step('Click the checkout button', async() => {
     await headerTop.clickCheckoutButton();
@@ -1334,7 +1334,7 @@ test('Scenario: Filling out the Coupon field whilst on the payment page', async 
 
 });
 
-test('Scenario: Clicking Apply Coupon button whilst on the payment page', async ({ headerTop, basket, checkout, payment }) => {
+test('Scenario: Clicking Apply Coupon button whilst on the payment page', { tag: '@smoke' }, async ({ headerTop, basket, checkout, payment }) => {
 
   await test.step('Click the checkout button', async() => {
     await headerTop.clickCheckoutButton();
@@ -1397,7 +1397,7 @@ test('Scenario: Clicking Remove Coupon button whilst on the payment page', async
 
 });
 
-test('Scenario: Adding a comment whilst on the payment page', async ({ headerTop, basket, checkout, payment }) => {
+test('Scenario: Adding a comment whilst on the payment page', { tag: '@smoke' }, async ({ headerTop, basket, checkout, payment }) => {
 
   await test.step('Click the checkout button', async() => {
     await headerTop.clickCheckoutButton();
@@ -1580,7 +1580,7 @@ test('Scenario: Checking out New Address form on new payment address page', asyn
 
 });
 
-test('Scenario: Adding new payment address', async ({ headerTop, basket, checkout, payment, newAddress }) => {
+test('Scenario: Adding new payment address', { tag: '@smoke' }, async ({ headerTop, basket, checkout, payment, newAddress }) => {
 
   await test.step('Click the checkout button', async() => {
     await headerTop.clickCheckoutButton();

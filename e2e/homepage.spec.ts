@@ -3,7 +3,7 @@ import { urls } from '../utils/variables/url';
 import { title } from '../utils/variables/title';
 import { items } from '../utils/variables/items';
 
-test('Scenario: Clicking the logo whilst on the homepage', async ({ headerTop }) => {
+test('Scenario: Clicking the logo whilst on the homepage', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('AC: The logo can be clicked', async() => {
     await headerTop.clickHomepageLogo();
@@ -19,7 +19,7 @@ test('Scenario: Clicking the logo whilst on the homepage', async ({ headerTop })
 
 });
 
-test('Scenario: Clicking the Specials button whilst on the homepage', async ({ headerTop }) => {
+test('Scenario: Clicking the Specials button whilst on the homepage', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('AC: The button can be clicked', async() => {
     await headerTop.clickSpecialsButton();
@@ -50,7 +50,7 @@ test('Scenario: Hovering over the Home button whilst on the homepage', async ({ 
 
 });
 
-test('Scenario: Clicking the Home button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the Home button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
 
   await test.step('AC: The button can be clicked', async() => {
     await headerBot.clickHomeButton();
@@ -126,7 +126,7 @@ test('Scenario: Clicking the Checkout button whilst on the expanded home menu', 
 
 });
 
-test('Scenario: Clicking the Search field whilst on the homepage', async ({ headerTop }) => {
+test('Scenario: Clicking the Search field whilst on the homepage', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('AC: The field can be interacted with', async() => {
     await headerTop.clickSearchField();
@@ -254,7 +254,7 @@ test('Scenario: Clicking the Linkedin button whilst on the expanded home menu', 
 
 });
 
-test('Scenario: Hovering over the Apparels and Accessories button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Hovering over the Apparels and Accessories button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be interacted with', async() => {
     await headerBot.hoverApparelsButton();
@@ -267,7 +267,7 @@ test('Scenario: Hovering over the Apparels and Accessories button whilst on the 
 
 });
 
-test('Scenario: Hovering over the Makeup button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Hovering over the Makeup button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be interacted with', async() => {
     await headerBot.hoverMakeupButton();
@@ -284,7 +284,7 @@ test('Scenario: Hovering over the Makeup button whilst on the homepage', async (
 
 });
 
-test('Scenario: Hovering over the Skincare button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Hovering over the Skincare button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be interacted with', async() => {
     await headerBot.hoverSkincareButton();
@@ -300,7 +300,7 @@ test('Scenario: Hovering over the Skincare button whilst on the homepage', async
 
 });
 
-test('Scenario: Hovering over the Fragrance button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Hovering over the Fragrance button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be interacted with', async() => {
     await headerBot.hoverFragranceButton();
@@ -313,7 +313,7 @@ test('Scenario: Hovering over the Fragrance button whilst on the homepage', asyn
 
 });
 
-test('Scenario: Hovering over the Men button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Hovering over the Men button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be interacted with', async() => {
     await headerBot.hoverMenButton();
@@ -328,7 +328,7 @@ test('Scenario: Hovering over the Men button whilst on the homepage', async ({ h
 
 });
 
-test('Scenario: Hovering over the Haircare button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Hovering over the Haircare button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be interacted with', async() => {
     await headerBot.hoverHaircareButton();
@@ -341,7 +341,7 @@ test('Scenario: Hovering over the Haircare button whilst on the homepage', async
 
 });
 
-test('Scenario: Hovering over the Books button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Hovering over the Books button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be interacted with', async() => {
     await headerBot.hoverBooksButton();
@@ -354,7 +354,7 @@ test('Scenario: Hovering over the Books button whilst on the homepage', async ({
 
 });
 
-test('Scenario: Clicking the Apparel and Accessories button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the Apparel and Accessories button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await headerBot.clickApparelsButton();
@@ -370,7 +370,7 @@ test('Scenario: Clicking the Apparel and Accessories button whilst on the homepa
 
 });
 
-test('Scenario: Clicking the Makeup button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the Makeup button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await headerBot.clickMakeupButton();
@@ -386,7 +386,7 @@ test('Scenario: Clicking the Makeup button whilst on the homepage', async ({ hea
 
 });
 
-test('Scenario: Clicking the Skincare button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the Skincare button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await headerBot.clickSkincareButton();
@@ -402,7 +402,7 @@ test('Scenario: Clicking the Skincare button whilst on the homepage', async ({ h
 
 });
 
-test('Scenario: Clicking the Fragrance button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the Fragrance button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await headerBot.clickFragranceButton();
@@ -418,7 +418,7 @@ test('Scenario: Clicking the Fragrance button whilst on the homepage', async ({ 
 
 });
 
-test('Scenario: Clicking the Men button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the Men button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await headerBot.clickMenButton();
@@ -434,7 +434,7 @@ test('Scenario: Clicking the Men button whilst on the homepage', async ({ header
 
 });
 
-test('Scenario: Clicking the Haircare button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the Haircare button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await headerBot.clickHaircareButton();
@@ -450,7 +450,7 @@ test('Scenario: Clicking the Haircare button whilst on the homepage', async ({ h
 
 });
 
-test('Scenario: Clicking the Books button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the Books button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await headerBot.clickBooksButton();
@@ -935,7 +935,7 @@ test('Scenario: Checking out the slides section whilst on the homepage', async (
 
 });
 
-test('Scenario: Clicking the previous slide button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the previous slide button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
 
   await test.step('Hover over the slide section', async() => {
     await headerBot.hoverSlideSection();
@@ -959,7 +959,7 @@ test('Scenario: Clicking the previous slide button whilst on the homepage', asyn
 
 });
 
-test('Scenario: Clicking the next slide button whilst on the homepage', async ({ headerBot }) => {
+test('Scenario: Clicking the next slide button whilst on the homepage', { tag: '@smoke' }, async ({ headerBot }) => {
 
   await test.step('Hover over the slide section', async() => {
     await headerBot.hoverSlideSection();
@@ -999,7 +999,7 @@ test('Scenario: Checking out the featured products section whilst on the homepag
 
 });
 
-test('Scenario: Checking out an Item in the featured section whilst on the homepage', async ({ featured }) => {
+test('Scenario: Checking out an Item in the featured section whilst on the homepage', { tag: '@smoke' }, async ({ featured }) => {
    
   await test.step('AC: The item is displayed', async() => {
     await expect(featured.firstItem).toBeVisible();
@@ -1014,7 +1014,7 @@ test('Scenario: Checking out an Item in the featured section whilst on the homep
 
 });
 
-test('Scenario: Clicking Item name in the featured section whilst on the homepage', async ({ featured }) => {
+test('Scenario: Clicking Item name in the featured section whilst on the homepage', { tag: '@smoke' }, async ({ featured }) => {
    
   await test.step('AC: The name can be clicked', async() => {
     await featured.clickFirstItemName();
@@ -1127,7 +1127,7 @@ test('Scenario: Hovering over an Item in the latest section whilst on the homepa
 
 });
 
-test('Scenario: Clicking View button of a hovered over item in the latest section whilst on the homepage', async ({ latest }) => {
+test('Scenario: Clicking View button of a hovered over item in the latest section whilst on the homepage', { tag: '@smoke' }, async ({ latest }) => {
    
   await test.step('Hover over an item', async() => {
     await latest.hoverFirstItem();
@@ -1231,7 +1231,7 @@ test('Scenario: Clicking View button of a hovered over item in the bestsellers s
 
 });
 
-test('Scenario: Clicking Write review button of a hovered over item in the bestsellers section whilst on the homepage', async ({ bestsellers, baseballTshirtProduct }) => {
+test('Scenario: Clicking Write review button of a hovered over item in the bestsellers section whilst on the homepage', { tag: '@smoke' }, async ({ bestsellers, baseballTshirtProduct }) => {
    
   await test.step('Hover over an item', async() => {
     await bestsellers.hoverFirstItem();
@@ -1353,7 +1353,7 @@ test('Scenario: Checking out an Item old price in the specials section whilst on
 
 });
 
-test('Scenario: Clicking Benefit manufacturer button whilst on the homepage', async ({ brands }) => {
+test('Scenario: Clicking Benefit manufacturer button whilst on the homepage', { tag: '@smoke' }, async ({ brands }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await brands.clickBenefitBrand();
@@ -1401,7 +1401,7 @@ test('Scenario: Clicking MAC manufacturer button whilst on the homepage', async 
 
 });
 
-test('Scenario: Clicking Lancome manufacturer button whilst on the homepage', async ({ brands }) => {
+test('Scenario: Clicking Lancome manufacturer button whilst on the homepage', { tag: '@smoke' }, async ({ brands }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await brands.clickLancomeBrand();
@@ -1449,7 +1449,7 @@ test('Scenario: Clicking Giorgio Armani manufacturer button whilst on the homepa
 
 });
 
-test('Scenario: Clicking Dove manufacturer button whilst on the homepage', async ({ brands }) => {
+test('Scenario: Clicking Dove manufacturer button whilst on the homepage', { tag: '@smoke' }, async ({ brands }) => {
    
   await test.step('AC: The button can be clicked', async() => {
     await brands.clickDoveBrand();
@@ -1513,7 +1513,7 @@ test('Scenario: Clicking Sephora manufacturer button whilst on the homepage', as
 
 });
 
-test('Scenario: Checking out footer section whilst on the homepage', async ({ footer }) => {
+test('Scenario: Checking out footer section whilst on the homepage', { tag: '@smoke' }, async ({ footer }) => {
    
   await test.step('AC: The section is visible', async() => {
     await expect(footer.footer).toBeVisible();
@@ -1553,7 +1553,7 @@ test('Scenario: Checking out newsletter signup section in the footer whilst on t
 
 });
 
-test('Scenario: Clicking testimonials buttons in the testimonials section whilst on the homepage', async ({ footer }) => {
+test('Scenario: Clicking testimonials buttons in the testimonials section whilst on the homepage', { tag: '@smoke' }, async ({ footer }) => {
    
   await test.step('AC: The button can be clicked - first', async() => {
     await footer.clickFirstTestimonialButton();
@@ -1601,7 +1601,7 @@ test('Scenario: Filling out newsletter signup field in the footer whilst on the 
 
 });
 
-test('Scenario: Subscribing to a newsletter in the footer whilst on the homepage', async ({ footer }) => {
+test('Scenario: Subscribing to a newsletter in the footer whilst on the homepage', { tag: '@smoke' }, async ({ footer }) => {
    
   await test.step('Fill out the field', async() => {
     await footer.fillSubscribeNewsletterField();
@@ -1713,7 +1713,7 @@ test('Scenario: Clicking Site map button whilst on the homepage', async ({ foote
 
 });
 
-test('Scenario: Clicking Go top button whilst on the homepage', async ({ footer, headerTop }) => {
+test('Scenario: Clicking Go top button whilst on the homepage', { tag: '@smoke' }, async ({ footer, headerTop }) => {
    
   await test.step('Scroll down', async() => {
     await footer.footer.scrollIntoViewIfNeeded();

@@ -1,7 +1,7 @@
 import { test, expect } from '../utils/fixtures/fixtures';
 import { urls } from '../utils/variables/url';
 
-test('Scenario: Clicking the Apparel & Accessories link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Apparel & Accessories link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -49,7 +49,7 @@ test('Scenario: Clicking the T-shirts link whilst on the site map page', async (
   
 });
 
-test('Scenario: Clicking the Makeup link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Makeup link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -161,7 +161,7 @@ test('Scenario: Clicking the Makeup Value Sets link whilst on the site map page'
   
 });
 
-test('Scenario: Clicking the Skincare link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Skincare link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -257,7 +257,7 @@ test('Scenario: Clicking the Skincare Sun link whilst on the site map page', asy
   
 });
 
-test('Scenario: Clicking the Fragrance link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Fragrance link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -305,7 +305,7 @@ test('Scenario: Clicking the Fragrance Women link whilst on the site map page', 
   
 });
 
-test('Scenario: Clicking the Men category link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Men category link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -385,7 +385,7 @@ test('Scenario: Clicking the Men Skincare link whilst on the site map page', asy
   
 });
 
-test('Scenario: Clicking the Hair Care link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Hair Care link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -433,7 +433,7 @@ test('Scenario: Clicking the Shampoo link whilst on the site map page', async ({
   
 });
 
-test('Scenario: Clicking the Books link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Books link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -481,7 +481,7 @@ test('Scenario: Clicking the Paperback link whilst on the site map page', async 
   
 });
 
-test('Scenario: Clicking the Special Offers link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Special Offers link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -497,7 +497,7 @@ test('Scenario: Clicking the Special Offers link whilst on the site map page', a
   
 });
 
-test('Scenario: Clicking the My Account link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the My Account link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -593,7 +593,7 @@ test('Scenario: Clicking the Downloads link whilst on the site map page', async 
   
 });
 
-test('Scenario: Clicking the Shopping Cart link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Shopping Cart link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -609,7 +609,7 @@ test('Scenario: Clicking the Shopping Cart link whilst on the site map page', as
   
 });
 
-test('Scenario: Clicking the Checkout link whilst on the site map page', async ({ featured, headerTop, basket, footer, footerSiteMap }) => {
+test('Scenario: Clicking the Checkout link whilst on the site map page', { tag: '@smoke' }, async ({ featured, headerTop, basket, footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await featured.clickFirstItemCartButton();
@@ -631,7 +631,7 @@ test('Scenario: Clicking the Checkout link whilst on the site map page', async (
   
 });
 
-test('Scenario: Clicking the Search link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Search link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();
@@ -711,7 +711,7 @@ test('Scenario: Clicking the Shipping link whilst on the site map page', async (
   
 });
 
-test('Scenario: Clicking the Contact Us link whilst on the site map page', async ({ footer, footerSiteMap }) => {
+test('Scenario: Clicking the Contact Us link whilst on the site map page', { tag: '@smoke' }, async ({ footer, footerSiteMap }) => {
 
   await test.step('Navigate to the Site Map page', async() => {
     await footer.clickSiteMapButton();

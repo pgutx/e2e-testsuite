@@ -138,7 +138,7 @@ test('Scenario: Clicking search in product model checkbox whilst on the search p
 
 });
 
-test('Scenario: Searching for an item on the search page', async ({ headerTop, search }) => {
+test('Scenario: Searching for an item on the search page', { tag: '@smoke' }, async ({ headerTop, search }) => {
 
   await test.step('Navigate to the Search page', async() => {
     await headerTop.clickSearchButton();

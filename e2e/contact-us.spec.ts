@@ -85,7 +85,7 @@ test('Scenario: Clicking Reset button on the Contact us page', async ({ footer, 
 
 });
 
-test('Scenario: Submitting the Contact form on the Contact us page', async ({ footer, footerContactUs }) => {
+test('Scenario: Submitting the Contact form on the Contact us page', { tag: '@smoke' }, async ({ footer, footerContactUs }) => {
 
   await test.step('Navigate to the Contact Us page', async() => {
     await footer.clickContactUsButton();

@@ -326,7 +326,7 @@ test('Scenario: Accepting Privacy Policy during registration', async ({ headerTo
 
 });
 
-test('Scenario: Registering an account', async ({ headerTop, loginPage, createPage }) => {
+test('Scenario: Registering an account', { tag: '@smoke' }, async ({ headerTop, loginPage, createPage }) => {
 
   await test.step('Navigate to the login page', async() => {
     await headerTop.clickCustomerButton();

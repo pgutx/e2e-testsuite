@@ -3,7 +3,7 @@ import { urls } from '../utils/variables/url';
 import { title } from '../utils/variables/title';
 import { newAddressVariables } from '../utils/variables/address';
 
-test('Scenario: Expanding Welcome back user field whilst on the homepage', async ({ headerTop }) => {
+test('Scenario: Expanding Welcome back user field whilst on the homepage', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('AC: The field is interactable', async() => {
     await headerTop.hoverCustomerButton();
@@ -24,7 +24,7 @@ test('Scenario: Expanding Welcome back user field whilst on the homepage', async
 
 });
 
-test('Scenario: Clicking Welcome back user field whilst on the homepage', async ({ headerTop }) => {
+test('Scenario: Clicking Welcome back user field whilst on the homepage', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('AC: The button can be clicked', async() => {
     await headerTop.clickCustomerButton();
@@ -36,7 +36,7 @@ test('Scenario: Clicking Welcome back user field whilst on the homepage', async 
 
 });
 
-test('Scenario: Clicking Account Dashboard button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking Account Dashboard button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -56,7 +56,7 @@ test('Scenario: Clicking Account Dashboard button whilst hovering over the Welco
     
 });
 
-test('Scenario: Clicking My Wish list button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking My Wish list button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -76,7 +76,7 @@ test('Scenario: Clicking My Wish list button whilst hovering over the Welcome ba
     
 });
 
-test('Scenario: Clicking Edit Account Details button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking Edit Account Details button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -96,7 +96,7 @@ test('Scenario: Clicking Edit Account Details button whilst hovering over the We
     
 });
 
-test('Scenario: Clicking Change password button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking Change password button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -116,7 +116,7 @@ test('Scenario: Clicking Change password button whilst hovering over the Welcome
     
 });
 
-test('Scenario: Clicking Manage Address Book button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking Manage Address Book button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -136,7 +136,7 @@ test('Scenario: Clicking Manage Address Book button whilst hovering over the Wel
     
 });
 
-test('Scenario: Clicking Order History button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking Order History button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -156,7 +156,7 @@ test('Scenario: Clicking Order History button whilst hovering over the Welcome b
     
 });
 
-test('Scenario: Clicking Transaction History button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking Transaction History button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -176,7 +176,7 @@ test('Scenario: Clicking Transaction History button whilst hovering over the Wel
     
 });
 
-test('Scenario: Clicking Downloads button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking Downloads button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -196,7 +196,7 @@ test('Scenario: Clicking Downloads button whilst hovering over the Welcome back 
     
 });
 
-test('Scenario: Clicking Notifications button whilst hovering over the Welcome back button', async ({ headerTop }) => {
+test('Scenario: Clicking Notifications button whilst hovering over the Welcome back button', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('Hover over the Welcome Back user button', async() => {
     await headerTop.hoverCustomerButton();
@@ -216,7 +216,7 @@ test('Scenario: Clicking Notifications button whilst hovering over the Welcome b
     
 });
 
-test('Scenario: Expanding Account button whilst on the homepage', async ({ headerTop }) => {
+test('Scenario: Expanding Account button whilst on the homepage', { tag: '@smoke' }, async ({ headerTop }) => {
 
   await test.step('AC: The button is interactable', async() => {
     await headerTop.hoverAccountButton();
@@ -243,7 +243,7 @@ test('Scenario: Clicking Account button whilst on the homepage', async ({ header
 
 test.describe('Account Dashboard Page', () => {
 
-test('Scenario: Checking out account dashboard section whilst on the account dashboard', async ({ headerTop, dashboard }) => {
+test('Scenario: Checking out account dashboard section whilst on the account dashboard', { tag: '@smoke' }, async ({ headerTop, dashboard }) => {
 
   await test.step('Navigate to the account dashboard', async() => {
     await headerTop.clickAccountButton();
@@ -571,7 +571,7 @@ test.describe('Wish List Page', () => {
 
   test.describe.configure({ mode: 'default' });
 
-test('Scenario: Checking out populated wishlist page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Checking out populated wishlist page', { tag: '@smoke' }, async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
 
   await test.step('Navigate to the item page', async() => {
     await featured.hoverFirstItem();
@@ -701,7 +701,7 @@ test('Scenario: Clicking Remove button whilst on the wishlist page', async ({ he
 
 test.describe('My Account Information Page', () => {
 
-test('Scenario: Checking out account form section whilst on the my account information page', async ({ headerTop, accountInformation }) => {
+test('Scenario: Checking out account form section whilst on the my account information page', { tag: '@smoke' }, async ({ headerTop, accountInformation }) => {
 
   await test.step('Navigate to the my account information page', async() => {
     await headerTop.hoverCustomerButton();
@@ -799,7 +799,7 @@ test('Scenario: Clicking Account breadcrumb on the My account information page',
 
 });
 
-test('Scenario: Editing User information on the My account information page', async ({ headerTop, accountInformation }) => {
+test('Scenario: Editing User information on the My account information page', { tag: '@smoke' }, async ({ headerTop, accountInformation }) => {
 
   await test.step('Navigate to the my account information page', async() => {
     await headerTop.hoverCustomerButton();
@@ -826,7 +826,7 @@ test('Scenario: Editing User information on the My account information page', as
 
 test.describe('Change Password Page', () => {
 
-test('Scenario: Checking out change password form whilst on the Change password page', async ({ headerTop, accountChangePassword }) => {
+test('Scenario: Checking out change password form whilst on the Change password page', { tag: '@smoke' }, async ({ headerTop, accountChangePassword }) => {
 
   await test.step('Navigate to the change password page', async() => {
     await headerTop.hoverCustomerButton();
@@ -924,7 +924,7 @@ test('Scenario: Clicking Account breadcrumb on the Change password page', async 
 
 });
 
-test('Scenario: Editing password on the Change password page', async ({ headerTop, accountChangePassword }) => {
+test('Scenario: Editing password on the Change password page', { tag: '@smoke' }, async ({ headerTop, accountChangePassword }) => {
 
   await test.step('Navigate to the change password page', async() => {
     await headerTop.hoverCustomerButton();
@@ -952,7 +952,7 @@ test('Scenario: Editing password on the Change password page', async ({ headerTo
 
 test.describe('Manage Address Book Page', () => {
 
-test('Scenario: Checking out address book entries section whilst on the Address Book page', async ({ headerTop, accountAddressBook }) => {
+test('Scenario: Checking out address book entries section whilst on the Address Book page', { tag: '@smoke' }, async ({ headerTop, accountAddressBook }) => {
 
   await test.step('Navigate to the address book page', async() => {
     await headerTop.hoverCustomerButton();
@@ -1228,7 +1228,7 @@ test('Scenario: Clicking Back button whilst adding new address', async ({ header
 
 });
 
-test('Scenario: Adding new address via the form', async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
+test('Scenario: Adding new address via the form', { tag: '@smoke' }, async ({ headerTop, accountAddressBook, accountInsertNewAddress }) => {
 
   await test.step('Navigate to the address book page', async() => {
     await headerTop.hoverCustomerButton();
@@ -1237,6 +1237,7 @@ test('Scenario: Adding new address via the form', async ({ headerTop, accountAdd
 
   await test.step('Navigate to insert new address page', async() => {
     await accountAddressBook.clickNewAddressButton();
+    await accountAddressBook.page.waitForLoadState('domcontentloaded');
   });
 
   await test.step('AC: Each of the field is fillable', async() => {
@@ -1266,7 +1267,7 @@ test.describe('My Order History Page', () => {
 
   test.describe.configure({ mode: 'default' });
 
-test('Scenario: Order is visible whilst on the My Order History page', async ({ featured, headerTop, checkout, accountOrderHistory }) => {
+test('Scenario: Order is visible whilst on the My Order History page', { tag: '@smoke' }, async ({ featured, headerTop, checkout, accountOrderHistory }) => {
 
   await test.step('Add an item to the cart', async() => {
     await featured.clickFirstItemCartButton();
@@ -1330,7 +1331,7 @@ test('Scenario: Clicking Continue button whilst on the My Order History page', a
 
 test.describe('My Transactions Page', () => {
 
-test('Scenario: Checking out the My Transactions section on the My Transaction page', async ({ headerTop, accountMyTransactions }) => {
+test('Scenario: Checking out the My Transactions section on the My Transaction page', { tag: '@smoke' }, async ({ headerTop, accountMyTransactions }) => {
 
   await test.step('Navigate to the My Transactions page', async() => {
     await headerTop.hoverCustomerButton();
@@ -1364,9 +1365,9 @@ test('Scenario: Clicking Continue button whilst on the My Transactions page', as
 
 test.describe('My Downloads Page', () => {
 
-test('Scenario: Checking out the My Transactions section on the My Transaction page', async ({ headerTop, accountMyDownloads }) => {
+test('Scenario: Checking out the Downloads section on the Downloads page', { tag: '@smoke' }, async ({ headerTop, accountMyDownloads }) => {
 
-  await test.step('Navigate to the My Transactions page', async() => {
+  await test.step('Navigate to the Downloads page', async() => {
     await headerTop.hoverCustomerButton();
     await headerTop.clickDownloadsButton();
   });
@@ -1377,9 +1378,9 @@ test('Scenario: Checking out the My Transactions section on the My Transaction p
 
 });
 
-test('Scenario: Clicking Continue button whilst on the My Transactions page', async ({ headerTop, accountMyDownloads }) => {
+test('Scenario: Clicking Continue button whilst on the Downloads page', async ({ headerTop, accountMyDownloads }) => {
 
-  await test.step('Navigate to the My Transactions page', async() => {
+  await test.step('Navigate to the Downloads page', async() => {
     await headerTop.hoverCustomerButton();
     await headerTop.clickDownloadsButton();
   });
@@ -1398,7 +1399,8 @@ test('Scenario: Clicking Continue button whilst on the My Transactions page', as
 
 test.describe('Notifications and Newsletter Page', () => {
 
-test('Scenario: Checking out the Notifications and Newsletter section on the Notifcations and Newsletter page', async ({ headerTop, accountNotifications }) => {
+test('Scenario: Checking out the Notifications and Newsletter section on the Notifcations and Newsletter page', 
+{ tag: '@smoke' }, async ({ headerTop, accountNotifications }) => {
 
   await test.step('Navigate to the Notifications and Newsletter page', async() => {
     await headerTop.hoverCustomerButton();
@@ -1445,7 +1447,7 @@ test('Scenario: Clicking Back button whilst on the Notifications and Newsletter 
 
 });
 
-test('Scenario: Updating Newsletter settings whilst on the Notifications and Newsletter page', async ({ headerTop, accountNotifications }) => {
+test('Scenario: Updating Newsletter settings whilst on the Notifications and Newsletter page', { tag: '@smoke' }, async ({ headerTop, accountNotifications }) => {
 
   await test.step('Navigate to the Notifications and Newsletter page', async() => {
     await headerTop.hoverCustomerButton();

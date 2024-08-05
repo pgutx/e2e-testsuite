@@ -113,7 +113,7 @@ test('Scenario: Clicking Home breadcrumb whilst on the Makeup page', async ({ he
 
 });
 
-test('Scenario: Choosing Sort option whilst on the Makeup page', async ({ headerBot, categoryMakeup }) => {
+test('Scenario: Choosing Sort option whilst on the Makeup page', { tag: '@smoke' }, async ({ headerBot, categoryMakeup }) => {
 
   await test.step('Navigate to the Makeup page', async() => {
     await headerBot.clickMakeupButton();
@@ -219,7 +219,7 @@ test('Scenario: Choosing Item display option whilst on the Makeup page', async (
 
 });
 
-test('Scenario: Choosing number of items per page option whilst on the Makeup page', async ({ headerBot, categoryMakeup }) => {
+test('Scenario: Choosing number of items per page option whilst on the Makeup page', { tag: '@smoke' }, async ({ headerBot, categoryMakeup }) => {
 
   await test.step('Navigate to the Makeup page', async() => {
     await headerBot.clickMakeupButton();

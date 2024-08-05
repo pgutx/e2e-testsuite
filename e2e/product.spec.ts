@@ -28,7 +28,7 @@ test('Scenario: Validate page Title', async ({ featured }) => {
 
 });
 
-test('Scenario: Checking out Latest Products section whilst on the item page', async ({ featured, skinsheenBronzeStickProduct }) => {
+test('Scenario: Checking out Latest Products section whilst on the item page', { tag: '@smoke' }, async ({ featured, skinsheenBronzeStickProduct }) => {
 
   await test.step('Navigate to the product page', async() => {
     await featured.clickFirstItemName();
@@ -56,7 +56,7 @@ test('Scenario: Clicking Item name on Latest Products section whilst on the item
 
 });
 
-test('Scenario: Checking out an item whilst on the item page', async ({ featured, skinsheenBronzeStickProduct }) => {
+test('Scenario: Checking out an item whilst on the item page', { tag: '@smoke' }, async ({ featured, skinsheenBronzeStickProduct }) => {
 
   await test.step('Navigate to the product page', async() => {
     await featured.clickFirstItemName();
@@ -89,7 +89,7 @@ test('Scenario: Changing the quantity of an item on the item page', async ({ fea
 
 });
 
-test('Scenario: Clicking Add to cart button on the item page', async ({ featured, skinsheenBronzeStickProduct, headerTop, basket }) => {
+test('Scenario: Clicking Add to cart button on the item page', { tag: '@smoke' }, async ({ featured, skinsheenBronzeStickProduct, headerTop, basket }) => {
 
   await test.step('Navigate to the product page', async() => {
     await featured.clickFirstItemName();
@@ -111,7 +111,7 @@ test('Scenario: Clicking Add to cart button on the item page', async ({ featured
 
 });
 
-test('Scenario: Clicking Add to wishlist button on the item page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Clicking Add to wishlist button on the item page', { tag: '@smoke' }, async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
 
   await test.step('Navigate to the product page', async() => {
     await featured.clickFirstItemName();
@@ -150,7 +150,7 @@ test('Scenario: Clicking Description section button on the item page', async ({ 
 
 });
 
-test('Scenario: Clicking Review section button on the item page', async ({ featured, skinsheenBronzeStickProduct }) => {
+test('Scenario: Clicking Review section button on the item page', { tag: '@smoke' }, async ({ featured, skinsheenBronzeStickProduct }) => {
 
   await test.step('Navigate to the product page', async() => {
     await featured.clickFirstItemName();
@@ -322,7 +322,7 @@ test('Scenario: Filling out Captcha field in the Review section whilst on the it
 
 });
 
-test('Scenario: Posting a failed review in the Review section whilst on the item page', async ({ featured, skinsheenBronzeStickProduct, request }) => {
+test('Scenario: Posting a failed review in the Review section whilst on the item page', { tag: '@smoke' }, async ({ featured, skinsheenBronzeStickProduct, request }) => {
 
   await test.step('Navigate to the product page', async() => {
     await featured.clickFirstItemName();
