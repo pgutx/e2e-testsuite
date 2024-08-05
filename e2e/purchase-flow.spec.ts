@@ -98,7 +98,7 @@ test('Scenario: Clicking Cart dropdown whilst on the homepage', async ({ headerT
   
 });
 
-test.describe('Serial tests', () => {
+test.describe('Sequential tests', () => {
 
   test.describe.configure({ mode: 'default' });
 
@@ -287,7 +287,7 @@ test('Scenario: Adding Specials section first item to the cart', async ({ header
 
 });
 
-test.describe('Serial tests with setup hooks', () => {
+test.describe('Sequential tests with setup hooks', () => {
 
 test.beforeEach('Add an item to the cart', async({ featured }) => {
   await featured.clickFirstItemCartButton();

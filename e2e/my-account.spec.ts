@@ -579,6 +579,7 @@ test('Scenario: Checking out populated wishlist page', async ({ featured, skinsh
   });
   
   await test.step('Add the item to the wishlist', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickAddToWishList();
   });
 
@@ -931,6 +932,7 @@ test('Scenario: Editing password on the Change password page', async ({ headerTo
   });
 
   await test.step('AC: The fields are editable', async() => {
+    await accountChangePassword.page.waitForLoadState('domcontentloaded');
     await accountChangePassword.fillCurrentPasswordField();
     await accountChangePassword.fillNewPasswordField();
     await accountChangePassword.fillNewPasswordConfirmField();

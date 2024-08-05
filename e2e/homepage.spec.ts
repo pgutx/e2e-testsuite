@@ -941,10 +941,6 @@ test('Scenario: Clicking the previous slide button whilst on the homepage', asyn
     await headerBot.hoverSlideSection();
   });
 
-  // await test.step('AC: The button can be clicked - First slide', async() => {
-  //   await headerBot.clickPreviousSlideButton();
-  // });
-
   await test.step('AC: The slides change', async() => {
     if(await headerBot.firstSlide.isVisible()){
     await headerBot.clickPreviousSlideButton();
@@ -968,10 +964,6 @@ test('Scenario: Clicking the next slide button whilst on the homepage', async ({
   await test.step('Hover over the slide section', async() => {
     await headerBot.hoverSlideSection();
   });
-
-  // await test.step('AC: The button can be clicked', async() => {
-  //   await headerBot.clickNextSlideButton();
-  // });
 
   await test.step('AC: The slides change', async() => {
     if(await headerBot.firstSlide.isVisible()){

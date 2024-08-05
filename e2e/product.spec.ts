@@ -79,6 +79,7 @@ test('Scenario: Changing the quantity of an item on the item page', async ({ fea
   });
       
   await test.step('AC: The field can be filled out', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.fillQuantityField();
   });
 
@@ -95,6 +96,7 @@ test('Scenario: Clicking Add to cart button on the item page', async ({ featured
   });
       
   await test.step('AC: The button can be clicked', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickAddToCartButton();
   });
 
@@ -116,6 +118,7 @@ test('Scenario: Clicking Add to wishlist button on the item page', async ({ feat
   });
       
   await test.step('AC: The button can be clicked', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickAddToWishList();
   });
 
@@ -154,10 +157,12 @@ test('Scenario: Clicking Review section button on the item page', async ({ featu
   });
       
   await test.step('AC: The button can be clicked', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
   });
 
   await test.step('AC: Correct section is displayed', async() => {
+    await skinsheenBronzeStickProduct.reviewForm.waitFor({ state: 'visible' });
     await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
 
@@ -170,10 +175,12 @@ test('Scenario: Clicking Tag section button on the item page', async ({ featured
   });
       
   await test.step('AC: The button can be clicked', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickTagSectionButton();
   });
 
   await test.step('AC: Correct section is displayed', async() => {
+    await skinsheenBronzeStickProduct.tagSection.waitFor({ state: 'visible' });
     await expect(skinsheenBronzeStickProduct.tagSection).toBeVisible();
   });
 
@@ -202,6 +209,7 @@ test('Scenario: Clicking Rating star button in the Review section whilst on the 
   });
       
   await test.step('Open Review section', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
     await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
@@ -255,6 +263,7 @@ test('Scenario: Filling out Name field in the Review section whilst on the item 
   });
       
   await test.step('Open Review section', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
     await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
@@ -276,6 +285,7 @@ test('Scenario: Filling out Review field in the Review section whilst on the ite
   });
       
   await test.step('Open Review section', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
     await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
@@ -297,6 +307,7 @@ test('Scenario: Filling out Captcha field in the Review section whilst on the it
   });
       
   await test.step('Open Review section', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
     await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
@@ -318,6 +329,7 @@ test('Scenario: Posting a failed review in the Review section whilst on the item
   });
       
   await test.step('Open Review section', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickReviewSectionButton();
     await expect(skinsheenBronzeStickProduct.reviewForm).toBeVisible();
   });
@@ -345,6 +357,7 @@ test('Scenario: Clicking Tag button in the Tags section whilst on the item page'
   });
       
   await test.step('Open Tag section', async() => {
+    await skinsheenBronzeStickProduct.page.waitForLoadState('domcontentloaded');
     await skinsheenBronzeStickProduct.clickTagSectionButton();
     await expect(skinsheenBronzeStickProduct.tagCheeks).toBeVisible();
   });
