@@ -111,7 +111,7 @@ test('Scenario: Clicking Add to cart button on the item page', { tag: '@smoke' }
 
 });
 
-test('Scenario: Clicking Add to wishlist button on the item page', { tag: '@smoke' }, async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
+test('Scenario: Clicking Add to wishlist button on the item page', async ({ featured, skinsheenBronzeStickProduct, headerTop, wishList }) => {
 
   await test.step('Navigate to the product page', async() => {
     await featured.clickFirstItemName();
