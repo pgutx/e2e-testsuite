@@ -38,3 +38,15 @@ Two workflows are prepared - Smoke and End to End. The first one is set to run o
 ## Report
 
 The HTML report is served over Monocart reporter, additionally both workflows generate HTML report which can be downloaded and served as a simple web page.
+
+## Docker Image
+
+Here are the steps to run the tests via the Docker container.
+
+Spin up the Docker engine
+
+Run the 
+
+ ```docker run --rm pgutx/playwright-end-to-end-testsuite:latest``` 
+ 
+ via the CLI
