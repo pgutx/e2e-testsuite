@@ -1,5 +1,5 @@
 name: Smoke Test
-run-name: ${{ github.actor }} - smoke test test run
+run-name: Smoke test run
 on:
   schedule:
   - cron: '0 8 * * 1/3'
