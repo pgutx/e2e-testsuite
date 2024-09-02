@@ -1,6 +1,6 @@
 ![Smoke](https://github.com/pgutx/e2e-testsuite/actions/workflows/smoke.yml/badge.svg) ![E2E](https://github.com/pgutx/e2e-testsuite/actions/workflows/e2e.yml/badge.svg) 
 
-# End to End testsuite
+# End to End testsuite - E-commerce platform
 
 ## About
 Automated End to End testsuite. This testsuite is a part of the system testing project which additionally consists of testplan and manually drafted testcases.
