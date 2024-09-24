@@ -17,7 +17,7 @@ The report is served over a custom - **Monocart** - reporter.
 Link to the report - 
 https://e2e-testsuite-report.netlify.app/
 
-Additionally two **GitHub Actions** workflow are set up, smoke test which runs every 3rd day from monday to sunday at 8am and end to end workflow which runs on manual dispatch.
+Additionally two **GitHub Actions** workflows are set up, smoke test which runs every 3rd day from monday to sunday at 8am and end to end workflow which runs on manual dispatch.
 
 ## Tests
 
